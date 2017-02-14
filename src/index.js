@@ -1,48 +1,40 @@
-import { render } from 'react-dom';
 import React from 'react';
+import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+
 import store from './store/store';
-import Counter from './component/counter';
 
 const rootElement = document.getElementById('app');
 
-/*ReactDom.render(
-	<AppContainer> 
-		<App />
-	</AppContainer>,
-	rootElement
-);
-
-if (module.hot) {
-	module.hot.accept('./app', () => {
-		const NextApp = require('./app').default;
-		ReactDom.render(
-			<AppContainer> 
-				<NextApp />
-			</AppContainer>,
-			rootElement
-		);
-	});
-}*/
-
-const renderFunction = () => {
+const renderApp = () => {
+  const Counter = require('./component/counter');
   render(
-    <Counter
-      value={store.getState()}
-      onIncrement={() =>
-        store.dispatch({
-          type: 'INCREMENT'           
-        })            
-      }
-      onDecrement={() =>
-        store.dispatch({
-          type: 'DECREMENT'           
-        })            
-      }
-    />,
+    <AppContainer> 
+      <Counter
+        value={store.getState()}
+        onIncrement={() =>
+          store.dispatch({
+            type: 'INCREMENT'           
+          })            
+        }
+        onDecrement={() =>
+          store.dispatch({
+            type: 'DECREMENT'           
+          })            
+        }
+      />
+    </AppContainer>,
     rootElement
   );
 };
 
-store.subscribe(renderFunction);
-renderFunction();
+store.subscribe(renderApp);
+renderApp(rootElement);
+
+if (module.hot) {
+	module.hot.accept(
+    './component/counter',
+    () => renderApp(rootElement)
+  );
+}
