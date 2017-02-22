@@ -4,7 +4,6 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 
 import store from './store/store';
-import { action } from './action/action';
 
 const rootElement = document.getElementById('app');
 
@@ -20,7 +19,6 @@ const renderApp = () => {
   );
 };
 
-// store.subscribe(renderApp);
 renderApp(rootElement);
 
 if (module.hot) {
