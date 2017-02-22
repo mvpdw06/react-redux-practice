@@ -18,10 +18,10 @@ const mapStateToProps = (state) => {
   return { value: state };
 }
 
-const mapDispatchToProps = {
-  onIncrement: action.doIncrement(),
-  onDecrement: action.doDecrement()
-}
+const mapDispatchToProps = (dispatch) => ({
+  onIncrement: () => dispatch(action.doIncrement()),
+  onDecrement: () => dispatch(action.doDecrement())
+});
 
 module.exports = connect(
   mapStateToProps,
