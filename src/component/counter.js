@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { actionCreator } from '../action/action';
+import actionCreator from '../action/action';
 
 const Counter = ({
   value,
@@ -15,12 +15,12 @@ const Counter = ({
 );
 
 const mapStateToProps = (state) => {
-  return { value: state };
+  return { value: state.counter };
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  onIncrement: () => dispatch(actionCreator.doIncrement),
-  onDecrement: () => dispatch(actionCreator.doDecrement)
+  onIncrement: () => dispatch(actionCreator.counter.doIncrement),
+  onDecrement: () => dispatch(actionCreator.counter.doDecrement)
 });
 
 module.exports = connect(

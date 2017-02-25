@@ -1,12 +1,11 @@
-// import reducer from '../reducer/reducer';
-import reducer from '../reducer/counterReducer';
+import reducer from '../reducer/reducer';
 import { createStore } from 'redux';
 import { devToolsEnhancer } from 'redux-devtools-extension';
 
-const store = createStore(reducer, 
-    devToolsEnhancer(
+const reduxDevTool = devToolsEnhancer(
     // Specify here name, actionsBlacklist, actionsCreators and other options if needed
-    )
 );
+
+const store = createStore(reducer, reduxDevTool);
 
 module.exports = store;

@@ -1,7 +1,7 @@
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+import { counterAction } from './counter/counterAction';
 
-export const actionCreator = {
-    doIncrement: { type: INCREMENT },
-    doDecrement: { type: DECREMENT }
+const actionCreator = {
+    counter: counterAction
 }
+
+module.exports = actionCreator;
