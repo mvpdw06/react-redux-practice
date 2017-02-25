@@ -1,5 +1,17 @@
 # React redux practice
 
+## Implement targets
+
+- [x] React
+- [x] webpack
+- [x] webpack devServer
+- [x] ESLint
+- [x] React hot loader
+- [x] Redux
+- [x] react-redux
+- [x] Devide logic in reducer and action creator.
+- [ ] action Middleware
+
 ## Dependencies
 
 1. webpack
