@@ -1,5 +1,4 @@
 {
-  // use babel-eslint for parsing!
   "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -8,12 +7,11 @@
       }
   },
   "env": {
-    // for browser
     "browser": true,
-    // in CommonJS
     "node": true
   },
-  // some rule options:
+  "globals": {
+  },
   "rules": {
     "quotes": [2, "single"],
     "no-undef": "error"
