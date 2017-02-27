@@ -1,10 +1,6 @@
 import reducer from '../reducer/reducer';
 import { createStore, applyMiddleware } from 'redux';
-import { devToolsEnhancer } from 'redux-devtools-extension';
-
-const reduxDevTool = devToolsEnhancer(
-    // Specify here name, actionsBlacklist, actionsCreators and other options if needed
-);
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const thunkMiddleware = ({ dispatch, getState }) => {
   return (next) => (action) => {
@@ -17,6 +13,6 @@ const thunkMiddleware = ({ dispatch, getState }) => {
 
 const middleware = applyMiddleware(thunkMiddleware);
 
-const store = createStore(reducer, middleware, reduxDevTool);
+const store = createStore(reducer, composeWithDevTools(middleware));
 
 module.exports = store;
