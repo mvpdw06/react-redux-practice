@@ -26,7 +26,7 @@ const mapStateToProps = (state) => {
   return { value: state.counter };
 }
 const mapDispatchToProps = (dispatch) => ({
-  initCounter: actionCreator.counter.initCounter,
+  initCounter: () => dispatch(actionCreator.counter.initCounter),
   onIncrement: () => dispatch(actionCreator.counter.doIncrement),
   onDecrement: () => dispatch(actionCreator.counter.doDecrement)
 });

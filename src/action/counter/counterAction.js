@@ -6,14 +6,9 @@ export const INITCUNTERSUCCESS = 'INITCUNTERSUCCESS';
 
 export const counterAction = {
     initCounter() {
-        console.log('run init')
         return (dispatch) => {
-            console.log('dis', dispatch)
             fetch('../data/counter.json')
-            .then((response) => {
-                console.log('response', response)
-                return response.json()
-            })
+            .then((response) => response.json())
             .then((value) => dispatch({
                 type: INITCUNTERSUCCESS,
                 value
