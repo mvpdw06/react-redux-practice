@@ -1,17 +1,9 @@
 import reducer from '../reducer/reducer';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
-const thunkMiddleware = ({ dispatch, getState }) => {
-  return (next) => (action) => {
-    if (typeof action === 'function') {
-      return action(dispatch, getState);
-    }
-    return next(action);
-  };
-};
-
-const middleware = applyMiddleware(thunkMiddleware);
+const middleware = applyMiddleware(thunk);
 
 const store = createStore(reducer, composeWithDevTools(middleware));
 
