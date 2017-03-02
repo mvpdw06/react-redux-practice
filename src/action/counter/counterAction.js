@@ -9,12 +9,12 @@ export const counterAction = {
         return (dispatch) => {
             fetch('../data/counter.json')
             .then((response) => response.json())
-            .then((value) => dispatch({
+            .then((data) => dispatch({
                 type: INITCUNTERSUCCESS,
-                value
+                value: data.value
             }));
         };
     },
-    doIncrement: { type: INCREMENT },
-    doDecrement: { type: DECREMENT }
+    doIncrement: () => ({ type: INCREMENT }),
+    doDecrement: () => ({ type: DECREMENT })
 }
