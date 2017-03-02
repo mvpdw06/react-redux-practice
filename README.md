@@ -10,7 +10,11 @@
 - [x] Redux
 - [x] react-redux
 - [x] Devide logic in reducer and action creator.
-- [ ] action Middleware
+- [x] redux-thunk
+- [x] redux-devtools-extension
+- [x] async action to fetch json data.
+- [ ] react-router
+
 
 ## Dependencies
 
@@ -27,6 +31,8 @@
 11. redux
 12. react-redux
 13. redux-devtools-extension
+14. redux-thunk
+15. react-router
 
 ## Start with base repository
 
