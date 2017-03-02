@@ -1,8 +1,7 @@
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
     case 'INITCUNTERSUCCESS':
-      state = action.value;
-      return state;
+      return action.value;
     case 'INCREMENT':
       return state + 1;
     case 'DECREMENT':
