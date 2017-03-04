@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import actionCreator from '../action/action';
-import NavBar from './navBar';
+import actionCreator from '../../action/action';
+import NavBar from '../navBar';
 
 class Counter extends Component {
   componentDidMount() {
