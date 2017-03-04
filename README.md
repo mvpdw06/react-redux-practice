@@ -13,6 +13,10 @@
 - [x] redux-thunk
 - [x] redux-devtools-extension
 - [x] async action to fetch json data.
+- [x] Endless Timer component.
+- [ ] Timer trigger fetching data for Synchronization in schedule.
+- [ ] View rotate to changing component's presentation like mobile.
+- [ ] Copy components.
 - [ ] react-router
 
 
