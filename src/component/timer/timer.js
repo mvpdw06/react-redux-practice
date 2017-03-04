@@ -19,14 +19,17 @@ class Timer extends Component {
     runEndlessTimer(currentTime) {
         const {
             onCountDown,
-            onResetTimer
+            onResetTimer,
+            initCounter
         } = this.props;
         
         if(currentTime < 1) {
-            this.props.onResetTimer();
+            onResetTimer();
+            // fetch Counter data.
+            initCounter();
         }
         else {
-            this.props.onCountDown();
+            onCountDown();
         }
     }
     render() {
@@ -52,7 +55,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => ({
     onCountDown: () => dispatch(actionCreator.timer.doCountDown()),
-    onResetTimer: () => dispatch(actionCreator.timer.doResetTimer())
+    onResetTimer: () => dispatch(actionCreator.timer.doResetTimer()),
+    initCounter: () => dispatch(actionCreator.counter.initCounter())
 });
 
 module.exports = connect(
