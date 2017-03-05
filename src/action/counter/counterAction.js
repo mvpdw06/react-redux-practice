@@ -2,7 +2,8 @@ import 'whatwg-fetch';
 
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-export const INITCUNTERSUCCESS = 'INITCUNTERSUCCESS';
+export const INITCOUNTERSUCCESS = 'INITCOUNTERSUCCESS';
+export const UPDATECOUNTERSUCCESS = 'UPDATECOUNTERSUCCESS';
 
 export const counterAction = {
     initCounter() {
@@ -10,7 +11,17 @@ export const counterAction = {
             fetch('../data/counter.json')
             .then((response) => response.json())
             .then((data) => dispatch({
-                type: INITCUNTERSUCCESS,
+                type: INITCOUNTERSUCCESS,
+                value: data.value
+            }));
+        };
+    },
+    updateCounter() {
+        return (dispatch) => {
+            fetch('../data/counter.json')
+            .then((response) => response.json())
+            .then((data) => dispatch({
+                type: UPDATECOUNTERSUCCESS,
                 value: data.value
             }));
         };

@@ -4,19 +4,39 @@ import actionCreator from '../../action/action';
 import NavBar from '../navBar';
 
 class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.getNewDataClass = this.getNewDataClass.bind(this);
+  }
   componentDidMount() {
     this.props.initCounter();
   }
+  getNewDataClass(dataType){
+    if(dataType === 'BETTER') {
+      return 'jumpBetter';
+    }
+    else if(dataType === 'WORSE') {
+      return 'jumpWorse';
+    }
+    else {
+      return 'normal';
+    }
+  }
   render() {
     const {
-      value,
+      state: {
+        value,
+        dataType
+      },
       onIncrement,
       onDecrement
     } = this.props;
+
+    const dataClass = this.getNewDataClass(dataType);
     return(
       <div>
         <NavBar text="This is a counter." />        
-        <h1>{value}</h1>
+        <h1 className={dataClass}>{value}</h1>
         <button onClick={onIncrement}>+</button>
         <button onClick={onDecrement}>-</button>
       </div>
@@ -25,7 +45,7 @@ class Counter extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { value: state.counter };
+  return { state: state.counter };
 }
 const mapDispatchToProps = (dispatch) => ({
   initCounter: () => dispatch(actionCreator.counter.initCounter()),

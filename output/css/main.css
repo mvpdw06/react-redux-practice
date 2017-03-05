@@ -1,0 +1,24 @@
+.normal {
+    font-size: 32px;
+    color: black;
+}
+
+.jumpBetter {
+    font-size: 32px;
+    animation: changeBetter 3s step-end both;
+}
+
+.jumpWorse {
+    font-size: 32px;
+    animation: changeWorse 3s step-end both;
+}
+
+@keyframes changeBetter {
+    from { color: red }
+    to   { color: black }
+}
+
+@keyframes changeWorse {
+    from { color: blue }
+    to   { color: black }
+}
