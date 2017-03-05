@@ -15,7 +15,7 @@
 - [x] async action to fetch json data.
 - [x] Endless Timer component.
 - [x] Timer trigger fetching data for synchronization in schedule.
-- [ ] When fetching data is not first time, it can compare it selfs and show different color(better or worse).
+- [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).
 - [x] Implement global service for detecting window layout change events (ex: rotate, view size change...).
 - [ ] View rotate to changing component's presentation like mobile.
 - [ ] Header auto collapse.
