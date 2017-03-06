@@ -17,6 +17,7 @@
 - [x] Timer trigger fetching data for synchronization in schedule.
 - [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).
 - [x] Implement global service for detecting window layout change events (ex: rotate, view size change...).
+- [x] Timer component implement pause / run feature.
 - [ ] View rotate to changing component's presentation like mobile.
 - [ ] Header auto collapse.
 - [ ] Copy components.
