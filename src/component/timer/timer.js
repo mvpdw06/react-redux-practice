@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import actionCreator from '../../action/action';
 
 let timerInstance = 0;
+let isPaused = false;
 class Timer extends Component {
     constructor(props) {
         super(props);
         this.runEndlessTimer = this.runEndlessTimer.bind(this);
+        this.pauseOrRun = this.pauseOrRun.bind(this);
     }
     componentDidMount() {
         timerInstance = setInterval(() => {
@@ -29,8 +31,11 @@ class Timer extends Component {
             updateCounter();
         }
         else {
-            onCountDown();
+            !isPaused && onCountDown();
         }
+    }
+    pauseOrRun() {
+        isPaused = !isPaused;
     }
     render() {
         const { 
@@ -40,11 +45,14 @@ class Timer extends Component {
             }
         } = this.props;
 
+        const buttonName = isPaused ? 'Run Timer' : 'Pause Timer';
+
         return(
             <div>
                 <h2>This is a Timer</h2>
                 <h3>* TimeSpan: {timespan}</h3>
                 <h3>* CurrentTime: {currentTime}</h3>
+                <button onClick={this.pauseOrRun}>{buttonName}</button>
             </div>
         )
     }
