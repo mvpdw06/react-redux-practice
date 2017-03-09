@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Counter from './counter/counter';
-import Timer from './timer/timer';
-import actionCreator from '../action/action';
+import actionCreator from '../../action/action';
 
 class App extends Component {
     constructor(props) {

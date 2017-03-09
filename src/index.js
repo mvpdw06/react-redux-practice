@@ -8,11 +8,11 @@ import store from './store/store';
 const rootElement = document.getElementById('app');
 
 const renderApp = () => {
-  const RouterComponent = require('./component/routerComponent')
+  const RouterSetting = require('./component/routerSetting')
   render(
     <AppContainer>
       <Provider store={store}>
-        <RouterComponent />
+        <RouterSetting />
       </Provider>
     </AppContainer>,
     rootElement
@@ -23,7 +23,7 @@ renderApp(rootElement);
 
 if (module.hot) {
 	module.hot.accept(
-    './component/routerComponent.js',
+    './component/routerSetting.js',
     () => renderApp(rootElement)
   );
 }

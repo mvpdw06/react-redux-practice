@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
 import actionCreator from '../../action/action';
-import NavBar from '../navBar';
 
 class Counter extends Component {
   constructor(props) {
@@ -35,10 +35,12 @@ class Counter extends Component {
     const dataClass = this.getNewDataClass(dataType);
     return(
       <div>
-        <NavBar text="This is a counter." />        
+        <h1>This is a Counter.</h1>
         <h1 className={dataClass}>{value}</h1>
         <button onClick={onIncrement}>+</button>
         <button onClick={onDecrement}>-</button>
+        <br/>
+        <button onClick={browserHistory.goBack}>Go back!</button>
       </div>
     );
   }

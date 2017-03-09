@@ -1,12 +1,13 @@
-import App from './app';
+import React from 'react';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+
+import App from './global/app';
 import Landing from './langing';
 import Timer from './timer/timer';
 import Counter from './counter/counter';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import React from 'react';
 
-const RouterComponent = (props) => (
-  <Router history={hashHistory}>
+const RouterSetting = (props) => (
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Landing} />
       <Route path="/counter" component={Counter} />
@@ -15,4 +16,4 @@ const RouterComponent = (props) => (
   </Router>
 );
 
-module.exports = RouterComponent;
+module.exports = RouterSetting;
