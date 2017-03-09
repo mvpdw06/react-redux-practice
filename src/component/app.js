@@ -38,8 +38,7 @@ class App extends Component {
     render() {
         return(
             <div>
-                <Timer />
-                <Counter />
+                { this.props.children }
             </div>
         );
     }
