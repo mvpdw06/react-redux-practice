@@ -19,6 +19,8 @@
 - [x] Implement global service for detecting window layout change events (ex: rotate, view size change...).
 - [x] Timer component implement pause / run feature.
 - [x] react-router
+- [x] react-router-redux
+- [x] Implement component to get routing parameter as props.
 - [ ] Implement header / footer components like navigation bar.
 - [ ] Form validation.
 - [ ] View rotate to changing component's presentation like mobile.
