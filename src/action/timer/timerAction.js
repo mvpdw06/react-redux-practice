@@ -1,7 +1,6 @@
-export const COUNTDOWN = 'COUNTDOWN';
-export const RESETTIMER = 'RESETTIMER';
+import { TIMER } from '../../constant/constant';
 
 export const timerAction = {
-    doCountDown: () => ({ type: COUNTDOWN }),
-    doResetTimer: () => ({ type: RESETTIMER })
+    doCountDown: () => ({ type: TIMER.COUNTDOWN }),
+    doResetTimer: () => ({ type: TIMER.RESETTIMER })
 }

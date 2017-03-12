@@ -1,0 +1,8 @@
+const counterConstant = {
+    INCREMENT: 'INCREMENT',
+    DECREMENT: 'DECREMENT',
+    INITCOUNTERSUCCESS: 'INITCOUNTERSUCCESS',
+    UPDATECOUNTERSUCCESS: 'UPDATECOUNTERSUCCESS'
+}
+
+module.exports = counterConstant;

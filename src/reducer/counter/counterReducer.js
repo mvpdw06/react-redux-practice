@@ -1,3 +1,5 @@
+import { COUNTER } from '../../constant/constant';
+
 const NORMAL = 'NORMAL';
 const BETTER = 'BETTER';
 const WORSE = 'WORSE';
@@ -21,22 +23,22 @@ const handleDataType = (prevValue, nextValue) => {
 
 const counterReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'INITCOUNTERSUCCESS':
+    case COUNTER.INITCOUNTERSUCCESS:
       return {
         ...state,
         value: action.value
       };
-    case 'UPDATECOUNTERSUCCESS':
+    case COUNTER.UPDATECOUNTERSUCCESS:
       return {
         dataType: handleDataType(state.value, action.value),
         value: action.value
       };
-    case 'INCREMENT':
+    case COUNTER.INCREMENT:
       return {
         dataType: NORMAL,
         value: state.value + 1
       };
-    case 'DECREMENT':
+    case COUNTER.DECREMENT:
       return {
         dataType: NORMAL,
         value: state.value - 1

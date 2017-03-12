@@ -1,3 +1,5 @@
+import { GLOBAL } from '../../constant/constant';
+
 const initState = {
     vertical: true,
     viewSize: 0,
@@ -23,12 +25,12 @@ const changeViewSize = (viewSize) => {
 
 const globalReducer = (state = initState, action) => {
     switch (action.type) {
-    case 'VIEWROTATE':
+    case GLOBAL.VIEWROTATE:
         return {
             ...state,
             vertical: !state.vertical
         };
-    case 'VIEWCHANGESIZE':
+    case GLOBAL.VIEWCHANGESIZE:
         const newViewType = changeViewSize(action.data);
         return {
             ...state,

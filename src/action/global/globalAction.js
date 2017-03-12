@@ -1,7 +1,6 @@
-export const VIEWROTATE = 'VIEWROTATE';
-export const VIEWCHANGESIZE = 'VIEWCHANGESIZE';
+import { GLOBAL } from '../../constant/constant';
 
 export const globalAction = {
-    viewRotate: () => ({ type: VIEWROTATE }),
-    viewChangeSize: () => ({ type: VIEWCHANGESIZE })
+    viewRotate: () => ({ type: GLOBAL.VIEWROTATE }),
+    viewChangeSize: () => ({ type: GLOBAL.VIEWCHANGESIZE })
 }
