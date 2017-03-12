@@ -10,6 +10,7 @@ import Landing from './home/langing';
 import Timer from './timer/timer';
 import Counter from './counter/counter';
 import GetParam from './functional/getParam';
+import BeRedirect from './functional/beRedirect';
 
 const counterPath = '/counter';
 
@@ -33,6 +34,7 @@ const RouterSetting = (props) => (
       <IndexRoute component={Landing} />
       <Route path={counterPath} component={Counter} />
       <Route path='/getParam/:toShow' component={GetParam} />
+      <Route path='/beRedirect' component={BeRedirect} />
     </Route>
   </Router>
 );
