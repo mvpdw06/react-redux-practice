@@ -34,7 +34,7 @@
 - [x] Timer trigger fetching data for synchronization in schedule.
 - [x] Timer component implement pause / run feature.
 - [x] Let timer should be a part of global service.
-- [ ] Timer use different time span to count down in different view.
+- [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
 
 ### Cross modules
