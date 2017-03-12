@@ -4,10 +4,10 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import store from '../store/store';
 import App from './global/app';
-import Landing from './langing';
+import Landing from './home/langing';
 import Timer from './timer/timer';
 import Counter from './counter/counter';
-import GetParam from './getParam';
+import GetParam from './functional/getParam';
 
 const history = syncHistoryWithStore(browserHistory, store)
 
