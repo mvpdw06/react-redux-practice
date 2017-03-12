@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
 import actionCreator from '../../action/action';
 
 let timerInstance = 0;
@@ -55,7 +54,6 @@ class Timer extends Component {
                 <h3>* CurrentTime: {currentTime}</h3>
                 <button onClick={this.pauseOrRun}>{buttonName}</button>
                 <br/>
-                <button onClick={browserHistory.goBack}>Go back!</button>
             </div>
         )
     }

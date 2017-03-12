@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import actionCreator from '../../action/action';
+import Timer from '../timer/timer';
+import Header from './header';
+import Footer from './footer';
 
 class App extends Component {
     constructor(props) {
@@ -36,7 +39,10 @@ class App extends Component {
     render() {
         return(
             <div>
+                <Header />
+                <Timer />
                 { this.props.children }
+                <Footer />
             </div>
         );
     }

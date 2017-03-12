@@ -2,6 +2,8 @@
 
 ## Implement targets
 
+### Modules
+
 - [x] React
 - [x] webpack
 - [x] webpack devServer
@@ -9,25 +11,45 @@
 - [x] React hot loader
 - [x] Redux
 - [x] react-redux
-- [x] Devide logic in reducer and action creator.
 - [x] redux-thunk
-- [x] redux-devtools-extension
-- [x] async action to fetch json data.
-- [x] Endless Timer component.
-- [x] Timer trigger fetching data for synchronization in schedule.
-- [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).
-- [x] Implement global service for detecting window layout change events (ex: rotate, view size change...).
-- [x] Timer component implement pause / run feature.
 - [x] react-router
 - [x] react-router-redux
-- [x] Implement component to get routing parameter as props.
-- [ ] Implement header / footer components like navigation bar.
-- [ ] Form validation.
+- [x] redux-devtools-extension
+
+## Infrastructure
+
+- [x] async action to fetch json data.
+- [x] Devide logic in reducer and action creator.
+
+### Global services
+
+- [x] Implement global service for detecting window layout change events (ex: rotate, view size change...).
 - [ ] View rotate to changing component's presentation like mobile.
+- [ ] Implement header / footer components like navigation bar.
 - [ ] Header auto collapse.
+
+### Timer
+
+- [x] Endless Timer component.
+- [x] Timer trigger fetching data for synchronization in schedule.
+- [x] Timer component implement pause / run feature.
+- [x] Let timer should be a part of global service.
+- [ ] Timer use different time span to count down in different view.
+- [x] Change view trigger timer reset.
+
+### Cross modules
+
+- [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).
+
+### Router
+
+- [x] Implement component to get routing parameter as props.
+- [ ] When react-router changing view, show loading screen.
+
+### Others
+
+- [ ] Form validation.
 - [ ] Copy components.
-
-
 
 ## Dependencies
 
