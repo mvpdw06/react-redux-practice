@@ -11,18 +11,28 @@ import Timer from './timer/timer';
 import Counter from './counter/counter';
 import GetParam from './functional/getParam';
 
+const counterPath = '/counter';
+
 browserHistory.listen((location) => {
-  store.dispatch(action.timer.doResetTimer())
+  const { dispatch } = store;
+  const currentLocation = browserHistory.getCurrentLocation();
+  if(currentLocation.pathname === counterPath) {
+    dispatch(action.timer.changeTimerToCounter());
+  }
+  else {
+    dispatch(action.timer.changeTimerToDefault());
+  }
+  dispatch(action.timer.doResetTimer());
 });
 
 const history = syncHistoryWithStore(browserHistory, store)
 
 const RouterSetting = (props) => (
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path='/' component={App}>
       <IndexRoute component={Landing} />
-      <Route path="/counter" component={Counter} />
-      <Route path="/getParam/:toShow" component={GetParam} />
+      <Route path={counterPath} component={Counter} />
+      <Route path='/getParam/:toShow' component={GetParam} />
     </Route>
   </Router>
 );

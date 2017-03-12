@@ -1,6 +1,6 @@
 import { TIMER } from '../../constant/constant';
 
-const defaultTimeSpan = {
+const timespanType = {
     default: 60,
     counter: 30
 }
@@ -18,8 +18,20 @@ const timerReducer = (state = initState, action) => {
             currentTime: state.currentTime - 1
         };
     case TIMER.RESETTIMER:
-        state.currentTime = state.timespan;
-        return state;
+        return {
+            ...state,
+            currentTime: state.timespan
+        };
+    case TIMER.CHANGETIMESPANTODEFAULT:
+        return {
+            ...state,
+            timespan: timespanType.default
+        }
+    case TIMER.CHNAGETIMESPANTOCOUNTER:
+        return {
+            ...state,
+            timespan: timespanType.counter
+        }
     default:
         return state;
     }
