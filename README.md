@@ -45,6 +45,7 @@
 
 - [x] Implement component to get routing parameter as props.
 - [ ] When react-router changing view, show loading screen.
+- [ ] Router link to a page and be redirect to another page.
 
 ### Others
 
