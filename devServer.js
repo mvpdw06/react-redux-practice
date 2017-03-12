@@ -10,9 +10,7 @@ const PORT = 3000;
 
 const server = new WebpackDevServer(webpack(config), {
   contentBase: path.join(__dirname, 'output'),
-  // historyApiFallback: {
-  //   index: 'index.dev.html'
-  // },
+  historyApiFallback: true,
   publicPath: config.output.publicPath,
   hot: true,
   stats: {

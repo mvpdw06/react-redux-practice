@@ -44,6 +44,7 @@
 ### Router
 
 - [x] Implement component to get routing parameter as props.
+- [x] Resolve when we stay in some router url and refresh website, it should be not show 404 not found.
 - [ ] When react-router changing view, show loading screen.
 - [ ] Router link to a page and be redirect to another page.
 
