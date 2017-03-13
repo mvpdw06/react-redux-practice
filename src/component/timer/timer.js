@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import actionCreator from '../../action/action';
 
-let timerInstance = 0;
-let isPaused = false;
 class Timer extends Component {
     constructor(props) {
         super(props);
@@ -11,12 +9,12 @@ class Timer extends Component {
         this.pauseOrRun = this.pauseOrRun.bind(this);
     }
     componentDidMount() {
-        timerInstance = setInterval(() => {
+        this.timerInstance = setInterval(() => {
             this.runEndlessTimer(this.props.state.currentTime);
         }, 1000);
     }
     componentWillUnmount() {
-        clearInterval(timerInstance);
+        clearInterval(this.timerInstance);
     }
     runEndlessTimer(currentTime) {
         const {
@@ -31,11 +29,11 @@ class Timer extends Component {
             updateCounter();
         }
         else {
-            !isPaused && onCountDown();
+            !this.isPaused && onCountDown();
         }
     }
     pauseOrRun() {
-        isPaused = !isPaused;
+        this.isPaused = !this.isPaused;
     }
     render() {
         const { 
@@ -45,7 +43,7 @@ class Timer extends Component {
             }
         } = this.props;
 
-        const buttonName = isPaused ? 'Run Timer' : 'Pause Timer';
+        const buttonName = this.isPaused ? 'Run Timer' : 'Pause Timer';
 
         return(
             <div>

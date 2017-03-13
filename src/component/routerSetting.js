@@ -14,18 +14,6 @@ import BeRedirect from './functional/beRedirect';
 
 const counterPath = '/counter';
 
-browserHistory.listen((location) => {
-  const { dispatch } = store;
-  const currentLocation = browserHistory.getCurrentLocation();
-  if(currentLocation.pathname === counterPath) {
-    dispatch(action.timer.changeTimerToCounter());
-  }
-  else {
-    dispatch(action.timer.changeTimerToDefault());
-  }
-  dispatch(action.timer.doResetTimer());
-});
-
 const history = syncHistoryWithStore(browserHistory, store)
 
 const RouterSetting = (props) => (

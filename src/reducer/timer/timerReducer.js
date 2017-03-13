@@ -1,4 +1,4 @@
-import { TIMER } from '../../constant/constant';
+import { TIMER, ROUTER } from '../../constant/constant';
 
 const timespanType = {
     default: 60,
@@ -10,6 +10,21 @@ const initState = {
     currentTime: 5
 }
 
+const handlePathChange = (path) => {
+    let newTimespan;
+    if(path === '/counter') {
+        newTimespan = timespanType.counter;
+    }
+    else {
+        newTimespan = timespanType.default;
+    }
+
+    return {
+        timespan: newTimespan,
+        currentTime: newTimespan
+    }
+}
+
 const timerReducer = (state = initState, action) => {
     switch (action.type) {
     case TIMER.COUNTDOWN:
@@ -17,21 +32,8 @@ const timerReducer = (state = initState, action) => {
             ...state,
             currentTime: state.currentTime - 1
         };
-    case TIMER.RESETTIMER:
-        return {
-            ...state,
-            currentTime: state.timespan
-        };
-    case TIMER.CHANGETIMESPANTODEFAULT:
-        return {
-            ...state,
-            timespan: timespanType.default
-        }
-    case TIMER.CHNAGETIMESPANTOCOUNTER:
-        return {
-            ...state,
-            timespan: timespanType.counter
-        }
+    case ROUTER.LOCATION_CHANGE:
+        return handlePathChange(action.payload.pathname);
     default:
         return state;
     }
