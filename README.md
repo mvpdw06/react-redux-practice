@@ -15,10 +15,11 @@
 - [x] react-router
 - [x] react-router-redux
 - [x] redux-devtools-extension
+- [x] whatwg-fetch
 
 ## Infrastructure
 
-- [x] async action to fetch json data.
+- [x] Async action to fetch json data.
 - [x] Devide logic in reducer and action creator.
 
 ### Global services
@@ -70,6 +71,8 @@
 13. redux-devtools-extension
 14. redux-thunk
 15. react-router
+16. react-router-redux
+17. whatwg-fetch
 
 ## Start with base repository
 
