@@ -32,6 +32,11 @@ const timerReducer = (state = initState, action) => {
             ...state,
             currentTime: state.currentTime - 1
         };
+    case TIMER.RESETTIMER:
+        return {
+            ...state,
+            currentTime: state.timespan
+        };
     case ROUTER.LOCATION_CHANGE:
         return handlePathChange(action.payload.pathname);
     default:
