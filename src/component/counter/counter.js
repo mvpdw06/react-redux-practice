@@ -24,35 +24,40 @@ class Counter extends Component {
   }
   render() {
     const {
-      state: {
-        value,
-        dataType
-      },
+      counters,
       onIncrement,
-      onDecrement
+      onDecrement,
+      copyCounter
     } = this.props;
 
-    const dataClass = this.getNewDataClass(dataType);
+    const counterElement = counters.map((counter) => (
+      <li key={counter.id}>
+        <h2>This is No.{counter.id + 1} counter.</h2>
+        <h1 className={this.getNewDataClass(counter.dataType)}>{counter.value}</h1>
+        <button onClick={() => onIncrement && onIncrement(counter.id)}>+</button>
+        <button onClick={() => onDecrement && onDecrement(counter.id)}>-</button>
+        <br/>
+      </li>
+    ));
+
     return(
       <div>
-        <h1>This is a Counter.</h1>
-        <h1 className={dataClass}>{value}</h1>
-        <button onClick={onIncrement}>+</button>
-        <button onClick={onDecrement}>-</button>
-        <br/>
-        <button onClick={browserHistory.goBack}>Go back!</button>
+        <button onClick={copyCounter}>Copy counter</button>
+        <ul>{counterElement}</ul>
+        <button onClick={browserHistory.goBack}>Go back!</button>        
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  return { state: state.counter };
+  return { counters: state.counter };
 }
 const mapDispatchToProps = (dispatch) => ({
   initCounter: () => dispatch(actionCreator.counter.initCounter()),
-  onIncrement: () => dispatch(actionCreator.counter.doIncrement()),
-  onDecrement: () => dispatch(actionCreator.counter.doDecrement())
+  onIncrement: (id) => dispatch(actionCreator.counter.doIncrement(id)),
+  onDecrement: (id) => dispatch(actionCreator.counter.doDecrement(id)),
+  copyCounter: () => dispatch(actionCreator.counter.copyCounter())
 });
 
 module.exports = connect(

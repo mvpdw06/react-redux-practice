@@ -37,6 +37,8 @@
 - [x] Let timer should be a part of global service.
 - [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
+- [x] Copy counter component.
+- [ ] Trigger current page module update only.
 
 ### Cross modules
 
@@ -52,7 +54,6 @@
 ### Others
 
 - [ ] Form validation.
-- [ ] Copy components.
 
 ## Dependencies
 

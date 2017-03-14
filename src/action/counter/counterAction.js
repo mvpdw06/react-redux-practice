@@ -22,6 +22,7 @@ export const counterAction = {
             }));
         };
     },
-    doIncrement: () => ({ type: COUNTER.INCREMENT }),
-    doDecrement: () => ({ type: COUNTER.DECREMENT })
+    doIncrement: (id) => ({ type: COUNTER.INCREMENT, id }),
+    doDecrement: (id) => ({ type: COUNTER.DECREMENT, id }),
+    copyCounter: () => ({ type: COUNTER.COPYCOUNTER })
 }
