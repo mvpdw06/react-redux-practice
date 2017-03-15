@@ -54,6 +54,7 @@
 ### Others
 
 - [ ] Form validation.
+- [ ] High order component.
 
 ## Dependencies
 
