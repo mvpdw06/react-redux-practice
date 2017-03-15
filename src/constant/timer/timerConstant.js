@@ -1,6 +1,7 @@
 const timerConstant = {
     COUNTDOWN: 'COUNTDOWN',
-    RESETTIMER: 'RESETTIMER'
+    RESETTIMER: 'RESETTIMER',
+    PAUSETIMER: 'PAUSETIMER'
 }
 
 module.exports = timerConstant;

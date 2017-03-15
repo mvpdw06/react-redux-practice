@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import actionCreator from '../../action/action';
+import { counter } from '../../action/action';
 
 class Counter extends Component {
   constructor(props) {
@@ -54,10 +54,10 @@ const mapStateToProps = (state) => {
   return { counters: state.counter };
 }
 const mapDispatchToProps = (dispatch) => ({
-  initCounter: () => dispatch(actionCreator.counter.initCounter()),
-  onIncrement: (id) => dispatch(actionCreator.counter.doIncrement(id)),
-  onDecrement: (id) => dispatch(actionCreator.counter.doDecrement(id)),
-  copyCounter: () => dispatch(actionCreator.counter.copyCounter())
+  initCounter: () => dispatch(counter.initCounter()),
+  onIncrement: (id) => dispatch(counter.doIncrement(id)),
+  onDecrement: (id) => dispatch(counter.doDecrement(id)),
+  copyCounter: () => dispatch(counter.copyCounter())
 });
 
 module.exports = connect(

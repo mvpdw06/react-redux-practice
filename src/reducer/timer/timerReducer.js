@@ -7,10 +7,11 @@ const timespanType = {
 
 const initState = {
     timespan: 60,
-    currentTime: 5
+    currentTime: 5,
+    isPaused: false
 }
 
-const handlePathChange = (path) => {
+const handlePathChange = (state, path) => {
     let newTimespan;
     if(path === '/counter') {
         newTimespan = timespanType.counter;
@@ -20,6 +21,7 @@ const handlePathChange = (path) => {
     }
 
     return {
+        ...state,
         timespan: newTimespan,
         currentTime: newTimespan
     }
@@ -37,8 +39,13 @@ const timerReducer = (state = initState, action) => {
             ...state,
             currentTime: state.timespan
         };
+    case TIMER.PAUSETIMER:
+        return {
+            ...state,
+            isPaused: !state.isPaused
+        };
     case ROUTER.LOCATION_CHANGE:
-        return handlePathChange(action.payload.pathname);
+        return handlePathChange(state, action.payload.pathname);
     default:
         return state;
     }

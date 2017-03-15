@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import actionCreator from '../../action/action';
+import { global } from '../../action/action';
 import Timer from '../timer/timer';
 import Header from './header';
 import Footer from './footer';
@@ -52,8 +52,8 @@ const mapStateToProps = (state) => {
     return { state: state.global };
 }
 const mapDispatchToProps = (dispatch) => ({
-    viewRotate: () => dispatch(actionCreator.global.viewRotate()),
-    viewChangeSize: () => dispatch(actionCreator.global.viewChangeSize())
+    viewRotate: () => dispatch(global.viewRotate()),
+    viewChangeSize: () => dispatch(global.viewChangeSize())
 });
 
 module.exports = connect(
