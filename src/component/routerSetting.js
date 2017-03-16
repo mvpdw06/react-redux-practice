@@ -11,6 +11,7 @@ import Timer from './timer/timer';
 import Counter from './counter/counter';
 import GetParam from './functional/getParam';
 import BeRedirect from './functional/beRedirect';
+import Hoc from './functional/hoc';
 
 const counterPath = '/counter';
 
@@ -23,6 +24,7 @@ const RouterSetting = (props) => (
       <Route path={counterPath} component={Counter} />
       <Route path='/getParam/:toShow' component={GetParam} />
       <Route path='/beRedirect' component={BeRedirect} />
+      <Route path='/hoc' component={Hoc} />
     </Route>
   </Router>
 );

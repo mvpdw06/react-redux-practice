@@ -10,6 +10,7 @@ const Landing = (props) => (
       <li><Link to='/counter' activeStyle={{ color: 'blue' }}>Counter</Link></li>
       <li><Link to='/getParam/ThisIsATestParameter' activeStyle={{ color: 'blue' }}>GetParameters</Link></li>
       <li><Link to='/beRedirect'>Be Redircet</Link></li>
+      <li><Link to='/hoc'>High Order Component</Link></li>
     </ul>
   </div>
 );

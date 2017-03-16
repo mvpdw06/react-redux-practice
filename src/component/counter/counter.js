@@ -44,7 +44,7 @@ class Counter extends Component {
       <div>
         <button onClick={copyCounter}>Copy counter</button>
         <ul>{counterElement}</ul>
-        <button onClick={browserHistory.goBack}>Go back!</button>        
+        <button onClick={browserHistory.goBack}>Go back!</button>
       </div>
     );
   }
