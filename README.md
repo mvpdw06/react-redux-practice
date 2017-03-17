@@ -20,8 +20,12 @@
 
 ## Infrastructure
 
-- [x] Async action to fetch json data.
+- [x] Async action to fetch json data.(redux-thunk, fetch api)
 - [x] Devide logic in reducer / action / constant.
+- [x] Hot-module-replacement for component.(React-hot-loader)
+- [x] Hot-module-replacement for reducer.
+- [x] Eslint can accept rule of Object Rest / Spread operator.
+- [x] Eslint can accept class decorator.(babel-eslint)
 
 ### Global services
 
@@ -43,18 +47,18 @@
 
 ### Cross modules
 
-- [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).
+- [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).(data structure in reducer, css)
 
 ### Router
 
-- [x] Implement component to get routing parameter as props.
-- [x] Resolve when we stay in some router url and refresh website, it should be not show 404 not found.
-- [x] Router link to a page and be redirect to another page.
+- [x] Implement component to get routing parameter as props.(route rule setting)
+- [x] Resolve when we stay in some router url and refresh website, it should be not show 404 not found.(devServer historyApiFallback: true)
+- [x] Router link to a page and be redirect to another page.(browserHistory.push)
 
 ### High-order component
 
-- [x] simple HOC.
-- [x] HOC as class decorator.
+- [x] simple HOC.(enhancerFunction(Component))
+- [x] HOC as class decorator.(@enhancer)
 - [x] When view is changed, show loading screen.
 
 ### Others
