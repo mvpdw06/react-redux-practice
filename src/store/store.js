@@ -7,4 +7,9 @@ const middleware = applyMiddleware(thunk);
 
 const store = createStore(reducer, composeWithDevTools(middleware));
 
+module.hot && module.hot.accept('../reducer/reducer', () => {
+    const nextRootReducer = require('../reducer/reducer');
+    store.replaceReducer(nextRootReducer);
+});
+
 module.exports = store;
