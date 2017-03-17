@@ -8,6 +8,7 @@
 - [x] webpack
 - [x] webpack devServer
 - [x] ESLint
+- [x] babel-eslint
 - [x] React hot loader
 - [x] Redux
 - [x] react-redux
@@ -20,7 +21,7 @@
 ## Infrastructure
 
 - [x] Async action to fetch json data.
-- [x] Devide logic in reducer and action creator.
+- [x] Devide logic in reducer / action / constant.
 
 ### Global services
 
@@ -53,8 +54,8 @@
 ### High-order component
 
 - [x] simple HOC.
-- [ ] HOC as class decorator.
-- [ ] When view is changed, show loading screen.
+- [x] HOC as class decorator.
+- [x] When view is changed, show loading screen.
 
 ### Others
 
