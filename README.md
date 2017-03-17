@@ -51,6 +51,8 @@
 
 ### Router
 
+- [x] Router handle url changing events.(react-router)
+- [x] Router url change with action like redux.(react-router-redux)
 - [x] Implement component to get routing parameter as props.(route rule setting)
 - [x] Resolve when we stay in some router url and refresh website, it should be not show 404 not found.(devServer historyApiFallback: true)
 - [x] Router link to a page and be redirect to another page.(browserHistory.push)
