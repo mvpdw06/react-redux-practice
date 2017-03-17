@@ -16,6 +16,7 @@ const Enhancer = (ComposedComponent) => class extends Component {
     }
 }
 
+@Enhancer
 class Hoc extends Component {
     render() {
         const { data } = this.props;
@@ -29,4 +30,4 @@ class Hoc extends Component {
     }
 }
 
-module.exports = Enhancer(Hoc);
+module.exports = Hoc;
