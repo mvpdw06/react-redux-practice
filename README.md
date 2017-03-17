@@ -49,12 +49,16 @@
 - [x] Implement component to get routing parameter as props.
 - [x] Resolve when we stay in some router url and refresh website, it should be not show 404 not found.
 - [x] Router link to a page and be redirect to another page.
-- [ ] When react-router changing view, show loading screen.
+
+### High-order component
+
+- [x] simple HOC.
+- [ ] HOC as class decorator.
+- [ ] When view is changed, show loading screen.
 
 ### Others
 
 - [ ] Form validation.
-- [ ] High order component.
 
 ## Dependencies
 
@@ -75,6 +79,9 @@
 15. react-router
 16. react-router-redux
 17. whatwg-fetch
+18. eslint
+19. babel-eslint
+20. babel-plugin-transform-decorators-legacy
 
 ## Start with base repository
 
