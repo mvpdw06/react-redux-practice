@@ -2,7 +2,7 @@
 
 ## Implement targets
 
-### Modules
+### Frameworks
 
 - [x] React
 - [x] webpack
@@ -17,6 +17,8 @@
 - [x] react-router-redux
 - [x] redux-devtools-extension
 - [x] whatwg-fetch
+- [x] Jest
+- [x] eslint-plugin-jest
 
 ## Infrastructure
 
@@ -26,6 +28,7 @@
 - [x] Hot-module-replacement for reducer.
 - [x] Eslint can accept rule of Object Rest / Spread operator.
 - [x] Eslint can accept class decorator.(babel-eslint)
+- [ ] Webpack config file devide from production / development.
 
 ### Global services
 
@@ -63,6 +66,15 @@
 - [x] HOC as class decorator.(@enhancer)
 - [x] When view is changed, show loading screen.
 
+### unit-test
+
+- [x] Using Jest framework.
+- [x] Run Jest test script.
+- [x] Resolve Jest API warning in eslint.(eslint-plugin-jest)
+- [x] Test reducer's simple scnario.(reducer(state, actionObject))
+- [ ] Test all reducers.
+- [ ] Test React Component.
+
 ### Others
 
 - [ ] Form validation.
@@ -89,6 +101,8 @@
 18. eslint
 19. babel-eslint
 20. babel-plugin-transform-decorators-legacy
+21. jest
+22. eslint-plugin-jest
 
 ## Start with base repository
 
