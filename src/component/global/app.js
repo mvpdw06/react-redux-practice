@@ -23,8 +23,11 @@ class App extends Component {
         }
     }
     componentWillReceiveProps(nextProps) {
-        const { theme } = nextProps.state;
-        this.changeCSS(theme.path);
+        const nowTheme = this.props.state.theme;
+        const nextTheme = nextProps.state.theme;
+        if(nowTheme !== nextTheme) {
+            this.changeCSS(nextTheme.path);
+        }
     }
     changeCSS(cssFilePath) {
         document.getElementsByTagName('link')[0].href = cssFilePath;
