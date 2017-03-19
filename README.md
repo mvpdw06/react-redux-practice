@@ -71,8 +71,10 @@
 - [x] Using Jest framework.
 - [x] Run Jest test script.
 - [x] Resolve Jest API warning in eslint.(eslint-plugin-jest)
-- [x] Test reducer's simple scnario.(reducer(state, actionObject))
-- [ ] Test all reducers.
+- [x] Test reducer's simple scenario.(reducer(state, actionObject))
+- [x] Test all reducer sync action on expected.
+- [ ] Test all reducers async action.
+- [ ] Test current location changed action.
 - [ ] Test React Component.
 
 ### Others
