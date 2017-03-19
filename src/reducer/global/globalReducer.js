@@ -1,9 +1,29 @@
 import { GLOBAL } from '../../constant/constant';
 
+const themes = [
+    {
+        name: 'blue',
+        path: './css/theme_blue/main.css'
+    },
+    {
+        name: 'pink',
+        path: './css/theme_pink/main.css'
+    }
+];
+
+const handleThemeChange = (themeName) => {
+    const idx = themes.findIndex((theme) => theme.name === themeName);
+    if(idx === -1) return themes.filter((theme) => { return theme.name === 'blue' })[0];
+
+    const newTheme = Object.assign({}, themes[idx]);
+    return newTheme;
+}
+
 const initState = {
     vertical: true,
     viewSize: 0,
-    viewType: 1280
+    viewType: 1280,
+    theme: handleThemeChange('blue')
 }
 
 const changeViewSize = (viewSize) => {
@@ -37,6 +57,11 @@ const globalReducer = (state = initState, action) => {
             viewSize: action.data,
             viewType: newViewType
         };
+    case GLOBAL.THEMECHANGE:
+        return {
+            ...state,
+            theme: handleThemeChange(action.themeName)
+        }
     default:
         return state;
     }

@@ -11,6 +11,7 @@ class App extends Component {
         super(props);
         this.rotate = this.rotate.bind(this);
         this.changeViewSize = this.changeViewSize.bind(this);
+        this.changeCSS = this.changeCSS.bind(this);
     }
     componentDidMount() {
         if(window.addEventListener) {
@@ -20,6 +21,13 @@ class App extends Component {
             // only IE8 ~ IE10
             window.attachEvent('orientationchange', this.rotate);
         }
+    }
+    componentWillReceiveProps(nextProps) {
+        const { theme } = nextProps.state;
+        this.changeCSS(theme.path);
+    }
+    changeCSS(cssFilePath) {
+        document.getElementsByTagName('link')[0].href = cssFilePath;
     }
     componentWillUnmount() {
         if(window.removeEventListener) {
@@ -39,6 +47,8 @@ class App extends Component {
     render() {
         return(
             <div>
+                <button onClick={() => this.props.themeChange('pink') }>Change Theme to Pink</button>
+                <button onClick={() => this.props.themeChange('blue') }>Change Theme to Blue</button>
                 <Header />
                 <Timer />
                 { this.props.children }
@@ -53,7 +63,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => ({
     viewRotate: () => dispatch(global.viewRotate()),
-    viewChangeSize: () => dispatch(global.viewChangeSize())
+    viewChangeSize: () => dispatch(global.viewChangeSize()),
+    themeChange: (theme) => dispatch(global.themeChange(theme)),
 });
 
 module.exports = connect(

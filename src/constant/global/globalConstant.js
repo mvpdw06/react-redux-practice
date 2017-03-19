@@ -1,6 +1,7 @@
 const globalConstant = {
     VIEWROTATE: 'VIEWROTATE',
-    VIEWCHANGESIZE: 'VIEWCHANGESIZE'
+    VIEWCHANGESIZE: 'VIEWCHANGESIZE',
+    THEMECHANGE: 'THEMECHANGE'
 }
 
 module.exports = globalConstant;

@@ -36,6 +36,7 @@
 - [ ] View rotate to changing component's presentation like mobile.
 - [ ] Implement header / footer components like navigation bar.
 - [ ] Header auto collapse.
+- [ ] Theme change.
 
 ### Timer
 
@@ -45,12 +46,14 @@
 - [x] Let timer should be a part of global service.
 - [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
-- [x] Copy counter component.
+
 - [ ] Trigger current page module update only.
 
-### Cross modules
-
+### Counter
+- [x] Simple counter component.
+- [x] Copy counter component.
 - [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).(data structure in reducer, css)
+- [ ] Resolve after first time compare data, css will not change will cause color show be display.
 
 ### Router
 
@@ -66,7 +69,7 @@
 - [x] HOC as class decorator.(@enhancer)
 - [x] When view is changed, show loading screen.
 
-### unit-test
+### Unit-test
 
 - [x] Using Jest framework.
 - [x] Run Jest test script.
