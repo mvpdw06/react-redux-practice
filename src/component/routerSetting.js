@@ -12,6 +12,7 @@ import Counter from './counter/counter';
 import GetParam from './functional/getParam';
 import BeRedirect from './functional/beRedirect';
 import Hoc from './functional/hoc';
+import ExampleForm from './form/ExampleForm';
 
 const counterPath = '/counter';
 
@@ -25,6 +26,7 @@ const RouterSetting = (props) => (
       <Route path='/getParam/:toShow' component={GetParam} />
       <Route path='/beRedirect' component={BeRedirect} />
       <Route path='/hoc' component={Hoc} />
+      <Route path='/exampleForm' component={ExampleForm} />
     </Route>
   </Router>
 );

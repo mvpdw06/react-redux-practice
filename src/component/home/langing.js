@@ -11,6 +11,7 @@ const Landing = (props) => (
       <li><Link to='/getParam/ThisIsATestParameter' activeStyle={{ color: 'blue' }}>GetParameters</Link></li>
       <li><Link to='/beRedirect'>Be Redircet</Link></li>
       <li><Link to='/hoc'>Show splash screen before data arrived.(HOC)</Link></li>
+      <li><Link to='/exampleForm'>Example Form validation</Link></li>
     </ul>
   </div>
 );

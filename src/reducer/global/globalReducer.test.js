@@ -1,16 +1,4 @@
 import globalReducer from './globalReducer';
-import { global } from '../../action/action';
-
-const themes = [
-    {
-        name: 'blue',
-        path: './css/theme_blue/main.css'
-    },
-    {
-        name: 'pink',
-        path: './css/theme_pink/main.css'
-    }
-];
 
 describe('null or empty', () => {
     it('null state and empty action object should return null', () => {
@@ -22,23 +10,29 @@ describe('null or empty', () => {
 });
 
 describe('return init state', () => {
-    const initState = {
-        vertical: true,
-        viewSize: 0,
-        viewType: 1280,
-        theme: themes.filter((theme) => { return theme.name === 'blue' })[0]
-    }
     it('empty action object', () => {
         let state = {
             vertical: true,
             viewSize: 0,
             viewType: 1280,
-            theme: themes.filter((theme) => { return theme.name === 'blue' })[0]
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
         }
-        expect(globalReducer(state, {})).toEqual(initState);
+        expect(globalReducer(state, {})).toEqual(state);
     });
     it('undefined state and empty action object', () => {
-        expect(globalReducer(undefined, {})).toEqual(initState);
+        let state = {
+            vertical: true,
+            viewSize: 0,
+            viewType: 1280,
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
+        }
+        expect(globalReducer(undefined, {})).toEqual(state);
     });
 });
 
@@ -48,24 +42,49 @@ describe('sync action', () => {
             vertical: true,
             viewSize: 0,
             viewType: 1280,
-            theme: themes.filter((theme) => { return theme.name === 'blue' })[0]
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
         }
-        expect(globalReducer(state, global.viewRotate())).toEqual({
-            ...state,
-            vertical: !state.vertical
-        });
+        const newState = {
+            vertical: false,
+            viewSize: 0,
+            viewType: 1280,
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
+        }
+        const action = {
+            type: 'VIEWROTATE'
+        }
+        expect(globalReducer(state, action)).toEqual(newState);
     });
     it('theme change, theme: blue -> pink', () => {
         const state = {
             vertical: true,
             viewSize: 0,
             viewType: 1280,
-            theme: themes.filter((theme) => { return theme.name === 'blue' })[0]
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
         }
-        expect(globalReducer(state, global.themeChange('pink'))).toEqual({
-            ...state,
-            theme: themes.filter((theme) => { return theme.name === 'pink' })[0]
-        });
+        const newState = {
+            vertical: true,
+            viewSize: 0,
+            viewType: 1280,
+            theme: {
+                name: 'pink',
+                path: './css/theme_pink/main.css'
+            }
+        }
+        const action = {
+            type: 'THEMECHANGE',
+            themeName: 'pink'
+        }
+        expect(globalReducer(state, action)).toEqual(newState);
     });
 });
 

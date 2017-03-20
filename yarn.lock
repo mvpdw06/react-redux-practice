@@ -2471,6 +2471,13 @@ istanbul-reports@^1.0.0:
   dependencies:
     handlebars "^4.0.3"
 
+jasmine-reporters:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/jasmine-reporters/-/jasmine-reporters-2.2.1.tgz#de9a9201367846269e7ca8adff5b44221671fcbd"
+  dependencies:
+    mkdirp "^0.5.1"
+    xmldom "^0.1.22"
+
 jest:
   version "19.0.2"
   resolved "https://registry.yarnpkg.com/jest/-/jest-19.0.2.tgz#b794faaf8ff461e7388f28beef559a54f20b2c10"
@@ -2481,7 +2488,7 @@ jest-changed-files@^19.0.2:
   version "19.0.2"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-19.0.2.tgz#16c54c84c3270be408e06d2e8af3f3e37a885824"
 
-jest-cli@^19.0.2:
+jest-cli, jest-cli@^19.0.2:
   version "19.0.2"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-19.0.2.tgz#cc3620b62acac5f2d93a548cb6ef697d4ec85443"
   dependencies:
@@ -4378,6 +4385,10 @@ write@^0.2.1:
 xml-name-validator@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-2.0.1.tgz#4d8b8f1eccd3419aa362061becef515e1e559635"
+
+xmldom@^0.1.22:
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
 
 xtend@^4.0.0, "xtend@>=4.0.0 <4.1.0-0":
   version "4.0.1"

@@ -1,5 +1,4 @@
 import timerReducer from './timerReducer';
-import { timer } from '../../action/action';
 
 describe('null or empty', () => {
     it('null state and empty action object should return null', () => {
@@ -11,21 +10,21 @@ describe('null or empty', () => {
 });
 
 describe('return init state', () => {
-    const initState = {
-        timespan: 60,
-        currentTime: 5,
-        isPaused: false
-    }
     it('empty action object', () => {
         let state = {
             timespan: 60,
             currentTime: 5,
             isPaused: false
         }
-        expect(timerReducer(state, {})).toEqual(initState);
+        expect(timerReducer(state, {})).toEqual(state);
     });
     it('undefined state and empty action object', () => {
-        expect(timerReducer(undefined, {})).toEqual(initState);
+        let state = {
+            timespan: 60,
+            currentTime: 5,
+            isPaused: false
+        }
+        expect(timerReducer(undefined, {})).toEqual(state);
     });
 });
 
@@ -36,10 +35,15 @@ describe('sync action', () => {
             currentTime: 5,
             isPaused: false
         }
-        expect(timerReducer(state, timer.doCountDown())).toEqual({
-            ...state,
-            currentTime: state.currentTime -1
-        });
+        const newState = {
+            timespan: 60,
+            currentTime: 4,
+            isPaused: false
+        }
+        const action = {
+            type: 'COUNTDOWN'
+        }
+        expect(timerReducer(state, action)).toEqual(newState);
     });
     it('reset timer, currentTime: 5 -> 60', () => {
         let state = {
@@ -47,10 +51,15 @@ describe('sync action', () => {
             currentTime: 5,
             isPaused: false
         }
-        expect(timerReducer(state, timer.doResetTimer())).toEqual({
-            ...state,
-            currentTime: state.timespan
-        });
+        const newState = {
+            timespan: 60,
+            currentTime: 60,
+            isPaused: false
+        }
+        const action = {
+            type: 'RESETTIMER'
+        }
+        expect(timerReducer(state, action)).toEqual(newState);
     });
     it('pause timer, isPaused: false -> true', () => {
         let state = {
@@ -58,10 +67,15 @@ describe('sync action', () => {
             currentTime: 5,
             isPaused: false
         }
-        expect(timerReducer(state, timer.pauseTimer())).toEqual({
-            ...state,
-            isPaused: !state.isPaused
-        });
+        const newState = {
+            timespan: 60,
+            currentTime: 5,
+            isPaused: true
+        }
+        const action = {
+            type: 'PAUSETIMER'
+        }
+        expect(timerReducer(state, action)).toEqual(newState);
     });
 });
 
