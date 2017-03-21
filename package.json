@@ -12,6 +12,7 @@
   "license": "ISC",
   "jest": {
     "collectCoverage": true,
+    "testResultsProcessor": "./node_modules/jest-html-reporter",
     "setupTestFrameworkScriptFile": "./setup-jasmine-env.js",
     "unmockedModulePathPatterns": [
       "./node_modules/react",
@@ -39,6 +40,7 @@
     "jasmine-reporters": "^2.2.1",
     "jest": "^19.0.2",
     "jest-cli": "^19.0.2",
+    "jest-html-reporter": "^0.1.0",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.2",
     "react-router-redux": "^4.0.8",

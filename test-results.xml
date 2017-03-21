@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="null or empty" timestamp="2017-03-21T00:56:52" hostname="localhost" time="0.008" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="null or empty" name="null state and empty action object should return null" time="0.005" />
-  <testcase classname="null or empty" name="empty state and empty action object should return empty state" time="0" />
+ <testsuite name="null or empty" timestamp="2017-03-21T13:50:44" hostname="localhost" time="0.002" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="null or empty" name="null state and empty action object should return null" time="0.001" />
+  <testcase classname="null or empty" name="empty state and empty action object should return empty state" time="0.001" />
  </testsuite>
- <testsuite name="return init state" timestamp="2017-03-21T00:56:52" hostname="localhost" time="0.001" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+ <testsuite name="return init state" timestamp="2017-03-21T13:50:44" hostname="localhost" time="0.001" errors="0" tests="2" skipped="0" disabled="0" failures="0">
   <testcase classname="return init state" name="empty action object" time="0" />
   <testcase classname="return init state" name="undefined state and empty action object" time="0.001" />
  </testsuite>
- <testsuite name="sync action" timestamp="2017-03-21T00:56:52" hostname="localhost" time="0.001" errors="0" tests="3" skipped="0" disabled="0" failures="0">
-  <testcase classname="sync action" name="countDown, currentTime: 5 -&gt; 4" time="0" />
-  <testcase classname="sync action" name="reset timer, currentTime: 5 -&gt; 60" time="0.001" />
-  <testcase classname="sync action" name="pause timer, isPaused: false -&gt; true" time="0" />
+ <testsuite name="sync action" timestamp="2017-03-21T13:50:44" hostname="localhost" time="0.001" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="sync action" name="view rotate, vertical: true -&gt; false" time="0" />
+  <testcase classname="sync action" name="theme change, theme: blue -&gt; pink" time="0.001" />
  </testsuite>
 </testsuites>
