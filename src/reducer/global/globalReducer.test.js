@@ -1,16 +1,13 @@
 import globalReducer from './globalReducer';
 
-describe('null or empty', () => {
-    it('null state and empty action object should return null', () => {
+describe('empty action object', () => {
+    it(' + null state, should return null.', () => {
         expect(globalReducer(null, {})).toEqual(null);
     });
-    it('empty state and empty action object should return empty state', () => {
+    it(' + empty state object, should return empty state.', () => {
         expect(globalReducer({}, {})).toEqual({});
     });
-});
-
-describe('return init state', () => {
-    it('empty action object', () => {
+    it(' + state object, should return state object.', () => {
         let state = {
             vertical: true,
             viewSize: 0,
@@ -22,7 +19,7 @@ describe('return init state', () => {
         }
         expect(globalReducer(state, {})).toEqual(state);
     });
-    it('undefined state and empty action object', () => {
+    it(' + undefined state, should return init state.', () => {
         let state = {
             vertical: true,
             viewSize: 0,
@@ -36,8 +33,8 @@ describe('return init state', () => {
     });
 });
 
-describe('sync action', () => {
-    it('view rotate, vertical: true -> false', () => {
+describe('normal sync action object', () => {
+    it('view rotate action, should change vertical: true -> false', () => {
         const state = {
             vertical: true,
             viewSize: 0,
@@ -61,7 +58,7 @@ describe('sync action', () => {
         }
         expect(globalReducer(state, action)).toEqual(newState);
     });
-    it('theme change, theme: blue -> pink', () => {
+    it('theme change action, should change theme object: blue -> pink', () => {
         const state = {
             vertical: true,
             viewSize: 0,

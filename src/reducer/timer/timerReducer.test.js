@@ -1,16 +1,13 @@
 import timerReducer from './timerReducer';
 
-describe('null or empty', () => {
-    it('null state and empty action object should return null', () => {
+describe('empty action object', () => {
+    it(' + null state, should return null.', () => {
         expect(timerReducer(null, {})).toEqual(null);
     });
-    it('empty state and empty action object should return empty state', () => {
+    it(' + empty state object, should return empty state.', () => {
         expect(timerReducer({}, {})).toEqual({});
     });
-});
-
-describe('return init state', () => {
-    it('empty action object', () => {
+    it(' + state object, should return state object.', () => {
         let state = {
             timespan: 60,
             currentTime: 5,
@@ -18,7 +15,7 @@ describe('return init state', () => {
         }
         expect(timerReducer(state, {})).toEqual(state);
     });
-    it('undefined state and empty action object', () => {
+    it(' + undefined state, should return init state.', () => {
         let state = {
             timespan: 60,
             currentTime: 5,
@@ -28,8 +25,8 @@ describe('return init state', () => {
     });
 });
 
-describe('sync action', () => {
-    it('countDown, currentTime: 5 -> 4', () => {
+describe('normal sync action object', () => {
+    it('countDown action, should change currentTime: 5 -> 4', () => {
         let state = {
             timespan: 60,
             currentTime: 5,
@@ -45,7 +42,7 @@ describe('sync action', () => {
         }
         expect(timerReducer(state, action)).toEqual(newState);
     });
-    it('reset timer, currentTime: 5 -> 60', () => {
+    it('reset timer action, should change currentTime: 5 -> 60', () => {
         let state = {
             timespan: 60,
             currentTime: 5,
@@ -61,7 +58,7 @@ describe('sync action', () => {
         }
         expect(timerReducer(state, action)).toEqual(newState);
     });
-    it('pause timer, isPaused: false -> true', () => {
+    it('pause timer action, should change isPaused: false -> true', () => {
         let state = {
             timespan: 60,
             currentTime: 5,

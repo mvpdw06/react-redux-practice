@@ -1,16 +1,13 @@
 import counterReducer from './counterReducer';
 
-describe('null or empty', () => {
-    it('null state and empty action object should return null', () => {
+describe('empty action object', () => {
+    it(' + null state, should return null.', () => {
         expect(counterReducer(null, {})).toEqual(null);
     });
-    it('empty state and empty action object should return empty state', () => {
+    it(' + empty state object, should return empty state.', () => {
         expect(counterReducer({}, {})).toEqual({});
     });
-});
-
-describe('return init state', () => {
-    it('empty action object', () => {
+    it(' + state object, should return state object.', () => {
         let state = [
             {
                 id: 0,
@@ -20,7 +17,7 @@ describe('return init state', () => {
         ];
         expect(counterReducer(state, {})).toEqual(state);
     });
-    it('undefined state and empty action object', () => {
+    it(' + undefined state, should return init state.', () => {
         let state = [
             {
                 id: 0,
@@ -32,8 +29,8 @@ describe('return init state', () => {
     });
 });
 
-describe('sync action', () => {
-    it('increment without id, should return state', () => {
+describe('normal sync action object', () => {
+    it('increment action without id, should return state object', () => {
         const state = [
             {
                 id: 0,
@@ -44,7 +41,7 @@ describe('sync action', () => {
         const action = { type: 'INCREMENT' }
         expect(counterReducer(state, action)).toEqual(state);
     });
-    it('increment, id: 0 and value: 0 -> 1 ', () => {
+    it('increment action with id: 0, should change value: 0 -> 1 ', () => {
         const state = [
             {
                 id: 0,
@@ -62,7 +59,7 @@ describe('sync action', () => {
         const action = { type: 'INCREMENT', id: 0 }
         expect(counterReducer(state, action)).toEqual(newState);
     });
-    it('decrement without id, should return state', () => {
+    it('decrement action without id, should return state object', () => {
         const state = [
             {
                 id: 0,
@@ -73,7 +70,7 @@ describe('sync action', () => {
         const action = { type: 'DECREMENT' }
         expect(counterReducer(state, action)).toEqual(state);
     });
-    it('decrement, id: 0 and value: 1 -> 0 ', () => {
+    it('decrement action with id: 0, should change value: 1 -> 0', () => {
         const state = [
             {
                 id: 0,
@@ -91,7 +88,7 @@ describe('sync action', () => {
         const action = { type: 'DECREMENT', id: 0 }
         expect(counterReducer(state, action)).toEqual(newState);
     });
-    it('copy counter', () => {
+    it('copy counter action with one counter state, should return two counter state [id, id +1])', () => {
         const state = [
             {
                 id: 0,

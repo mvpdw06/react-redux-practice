@@ -81,7 +81,7 @@
 - [ ] Test current location changed action.
 - [ ] Test React Component.
 - [x] Code coverage report.
-- [ ] Test result report.
+- [x] Test result report.
 
 ### Form validation
 
