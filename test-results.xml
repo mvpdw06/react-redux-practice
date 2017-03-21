@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="empty action object" timestamp="2017-03-21T21:36:18" hostname="localhost" time="0.016" errors="0" tests="4" skipped="0" disabled="0" failures="0">
-  <testcase classname="empty action object" name=" + null state, should return null." time="0.011" />
+ <testsuite name="empty action object" timestamp="2017-03-21T22:45:00" hostname="localhost" time="0.008" errors="0" tests="4" skipped="0" disabled="0" failures="0">
+  <testcase classname="empty action object" name=" + null state, should return null." time="0.004" />
   <testcase classname="empty action object" name=" + empty state object, should return empty state." time="0.001" />
-  <testcase classname="empty action object" name=" + state object, should return state object." time="0.001" />
+  <testcase classname="empty action object" name=" + state object, should return state object." time="0" />
   <testcase classname="empty action object" name=" + undefined state, should return init state." time="0.002" />
  </testsuite>
- <testsuite name="normal sync action object" timestamp="2017-03-21T21:36:18" hostname="localhost" time="0.002" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="normal sync action object" name="view rotate action, should change vertical: true -&gt; false" time="0.001" />
+ <testsuite name="normal sync action object" timestamp="2017-03-21T22:45:00" hostname="localhost" time="0.002" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="normal sync action object" name="view rotate action, should change vertical: true -&gt; false" time="0" />
   <testcase classname="normal sync action object" name="theme change action, should change theme object: blue -&gt; pink" time="0.001" />
  </testsuite>
 </testsuites>

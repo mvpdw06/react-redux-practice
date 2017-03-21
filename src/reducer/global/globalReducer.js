@@ -51,11 +51,10 @@ const globalReducer = (state = initState, action) => {
             vertical: !state.vertical
         };
     case GLOBAL.VIEWCHANGESIZE:
-        const newViewType = changeViewSize(action.data);
+        const newViewType = changeViewSize(action.viewSize);
         return {
             ...state,
-            viewSize: action.data,
-            viewType: newViewType
+            viewSize: action.viewSize
         };
     case GLOBAL.THEMECHANGE:
         return {

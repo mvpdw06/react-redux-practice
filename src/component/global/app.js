@@ -16,10 +16,12 @@ class App extends Component {
     componentDidMount() {
         if(window.addEventListener) {
             window.addEventListener('orientationchange', this.rotate, false);
+            window.addEventListener('resize', this.changeViewSize, false);
         }
         else if(window.attachEvent) {
             // only IE8 ~ IE10
             window.attachEvent('orientationchange', this.rotate);
+            window.attachEvent('resize', this.rotate);
         }
     }
     componentWillReceiveProps(nextProps) {
@@ -35,17 +37,25 @@ class App extends Component {
     componentWillUnmount() {
         if(window.removeEventListener) {
             window.removeEventListener('orientationchange', this.rotate, false);
+            window.removeEventListener('resize', this.changeViewSize, false);
         }
         else if(window.detachEvent) {
             // only IE8 ~ IE10
             window.detachEvent('orientationchange', this.rotate);
+            window.detachEvent('resize', this.changeViewSize);
         }
     }
     rotate() {
-        this.props.viewRotate();
+        // TODO: check this API in all browsers.
+        const nowViewVertical = this.props.state.vertical;
+        const isNextViewVertical = window.screen.orientation.angle === 0;
+        if(nowViewVertical !== isNextViewVertical) {
+            this.props.viewRotate();
+        }
     }
     changeViewSize() {
-        this.props.changeViewSize();
+        // can adjust action sensitivity here
+        this.props.viewChangeSize(window.innerWidth);
     }
     render() {
         return(
@@ -66,7 +76,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => ({
     viewRotate: () => dispatch(global.viewRotate()),
-    viewChangeSize: () => dispatch(global.viewChangeSize()),
+    viewChangeSize: (viewSize) => dispatch(global.viewChangeSize(viewSize)),
     themeChange: (theme) => dispatch(global.themeChange(theme)),
 });
 

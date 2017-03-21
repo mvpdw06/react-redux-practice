@@ -33,10 +33,15 @@
 ### Global services
 
 - [x] Implement global service for detecting window layout change events (ex: rotate, view size change...).
+- [x] Theme change.
+- [x] Implement view size chnage to state.
+- [x] Fix view rotate detect.
+- [ ] Detect user browser to state.
+- [ ] Scroll bar controll to state.
 - [ ] View rotate to changing component's presentation like mobile.
 - [ ] Implement header / footer components like navigation bar.
 - [ ] Header auto collapse.
-- [ ] Theme change.
+
 
 ### Timer
 
@@ -46,7 +51,6 @@
 - [x] Let timer should be a part of global service.
 - [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
-
 - [ ] Trigger current page module update only.
 
 ### Counter
