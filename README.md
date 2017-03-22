@@ -37,7 +37,8 @@
 - [x] Implement view size chnage to state.
 - [x] Fix view rotate detect.
 - [ ] Detect user browser to state.
-- [ ] Scroll bar controll to state.
+- [x] Scroll bar controll to state.
+- [ ] Scroll to top action.
 - [ ] View rotate to changing component's presentation like mobile.
 - [ ] Implement header / footer components like navigation bar.
 - [ ] Header auto collapse.
@@ -86,6 +87,7 @@
 - [ ] Test React Component.
 - [x] Code coverage report.
 - [x] Test result report.
+- [ ] Test sync action will return object.
 
 ### Form validation
 

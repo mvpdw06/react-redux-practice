@@ -27,7 +27,8 @@ describe('empty action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
-            }
+            },
+            scrollTo: 0
         }
         expect(globalReducer(undefined, {})).toEqual(state);
     });
@@ -80,6 +81,58 @@ describe('normal sync action object', () => {
         const action = {
             type: 'THEMECHANGE',
             themeName: 'pink'
+        }
+        expect(globalReducer(state, action)).toEqual(newState);
+    });
+    it('view size change action, should change viewSize: 0 -> 100', () => {
+        const state = {
+            vertical: true,
+            viewSize: 0,
+            viewType: 1280,
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
+        }
+        const newState = {
+            vertical: true,
+            viewSize: 100,
+            viewType: 1280,
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            }
+        }
+        const action = {
+            type: 'VIEWCHANGESIZE',
+            viewSize: 100
+        }
+        expect(globalReducer(state, action)).toEqual(newState);
+    });
+    it('scroll to position action, should change scrollTo: 0 -> 100', () => {
+        const state = {
+            vertical: true,
+            viewSize: 0,
+            viewType: 1280,
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0
+        }
+        const newState = {
+            vertical: true,
+            viewSize: 0,
+            viewType: 1280,
+            theme: {
+                name: 'blue',
+                path: './css/theme_blue/main.css'
+            },
+            scrollTo: 100
+        }
+        const action = {
+            type: 'SCROLLTOPOSITION',
+            scrollTo: 100
         }
         expect(globalReducer(state, action)).toEqual(newState);
     });

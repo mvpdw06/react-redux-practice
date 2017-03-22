@@ -23,7 +23,8 @@ const initState = {
     vertical: true,
     viewSize: 0,
     viewType: 1280,
-    theme: handleThemeChange('blue')
+    theme: handleThemeChange('blue'),
+    scrollTo: 0
 }
 
 const changeViewSize = (viewSize) => {
@@ -60,6 +61,11 @@ const globalReducer = (state = initState, action) => {
         return {
             ...state,
             theme: handleThemeChange(action.themeName)
+        }
+    case GLOBAL.SCROLLTOPOSITION:
+        return {
+            ...state,
+            scrollTo: action.scrollTo
         }
     default:
         return state;
