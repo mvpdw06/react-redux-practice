@@ -83,12 +83,13 @@
 - [x] Test reducer's simple scenario.(reducer(state, actionObject))
 - [x] Test all reducer sync action on expected.
 - [x] All unit test's input and output should be fixed.
+- [x] Code coverage report.
+- [x] Test result report.
+- [x] Test sync action will return object.
 - [ ] Test all reducers async action.
 - [ ] Test current location changed action.
 - [ ] Test React Component.
-- [x] Code coverage report.
-- [x] Test result report.
-- [ ] Test sync action will return object.
+- [ ] Refactor unit-test folder structure.
 
 ### Form validation
 
