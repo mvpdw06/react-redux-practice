@@ -15,6 +15,11 @@ describe('empty action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         expect(globalReducer(state, {})).toEqual(state);
@@ -28,7 +33,11 @@ describe('empty action object', () => {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
             },
-            scrollTo: 0
+            scrollTo: 0,
+            browser: {
+                name: 'Safari',
+                version: undefined
+            }
         }
         expect(globalReducer(undefined, {})).toEqual(state);
     });
@@ -43,6 +52,11 @@ describe('normal sync action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         const newState = {
@@ -52,6 +66,11 @@ describe('normal sync action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         const action = {
@@ -67,6 +86,11 @@ describe('normal sync action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         const newState = {
@@ -76,6 +100,11 @@ describe('normal sync action object', () => {
             theme: {
                 name: 'pink',
                 path: './css/theme_pink/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         const action = {
@@ -92,6 +121,11 @@ describe('normal sync action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         const newState = {
@@ -101,6 +135,11 @@ describe('normal sync action object', () => {
             theme: {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
+            },
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
             }
         }
         const action = {
@@ -118,7 +157,11 @@ describe('normal sync action object', () => {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
             },
-            scrollTo: 0
+            scrollTo: 0,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
+            }
         }
         const newState = {
             vertical: true,
@@ -128,7 +171,11 @@ describe('normal sync action object', () => {
                 name: 'blue',
                 path: './css/theme_blue/main.css'
             },
-            scrollTo: 100
+            scrollTo: 100,
+            browser: {
+                name: 'Chrome',
+                version: '56.0'
+            }
         }
         const action = {
             type: 'SCROLLTOPOSITION',

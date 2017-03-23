@@ -19,6 +19,7 @@
 - [x] whatwg-fetch
 - [x] Jest
 - [x] eslint-plugin-jest
+- [x] bowser
 
 ## Infrastructure
 
@@ -36,12 +37,12 @@
 - [x] Theme change.
 - [x] Implement view size chnage to state.
 - [x] Fix view rotate detect.
-- [ ] Detect user browser to state.
+- [x] Detect user browser to state.(bowser)
 - [x] Scroll bar controll to state.
-- [ ] Scroll to top action.
 - [ ] View rotate to changing component's presentation like mobile.
 - [ ] Implement header / footer components like navigation bar.
 - [ ] Header auto collapse.
+- [ ] ~~Scroll to top action.~~(should not be a action for current app.)
 
 
 ### Timer
@@ -94,6 +95,11 @@
 - [x] Simple form.
 - [ ] Form validation.
 
+### i18n
+
+- [ ] Implement i18n solution.
+- [ ] Real fetch http online data
+
 ## Dependencies
 
 1. webpack
@@ -118,6 +124,7 @@
 20. babel-plugin-transform-decorators-legacy
 21. jest
 22. eslint-plugin-jest
+23. bowser
 
 ## Start with base repository
 

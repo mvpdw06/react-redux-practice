@@ -1,3 +1,4 @@
+import bowser from 'bowser';
 import { GLOBAL } from '../../constant/constant';
 
 const themes = [
@@ -24,7 +25,11 @@ const initState = {
     viewSize: 0,
     viewType: 1280,
     theme: handleThemeChange('blue'),
-    scrollTo: 0
+    scrollTo: 0,
+    browser: {
+        name: bowser.name,
+        version: bowser.version
+    }
 }
 
 const changeViewSize = (viewSize) => {
