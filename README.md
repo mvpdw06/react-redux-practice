@@ -98,7 +98,15 @@
 
 ### i18n
 
-- [ ] Implement i18n solution.
+- [x] Implement i18n solution.
+- [x] Simple i18n example.
+- [x] Translate class decorator.
+- [ ] Translate all words in app.
+- [ ] Multiple languages.
+- [ ] language in url path.
+
+### Others
+
 - [ ] Real fetch http online data
 
 ## Dependencies
