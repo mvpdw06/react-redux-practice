@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { translate, Interpolate } from 'react-i18next';
 
+import i18n from '../../i18n';
 import { global } from '../../action/action';
 import Timer from '../timer/timer';
 import Header from './header';
 import Footer from './footer';
 
+@translate(['view', 'nav'], { wait: true })
 class App extends Component {
     constructor(props) {
         super(props);
@@ -69,10 +72,15 @@ class App extends Component {
         this.props.scrollToPosition(document.body.scrollTop);
     }
     render() {
+        const { t } = this.props;
+        const toggle = lng => i18n.changeLanguage(lng);
         return(
             <div>
-                <button onClick={() => this.props.themeChange('pink') }>Change Theme to Pink</button>
-                <button onClick={() => this.props.themeChange('blue') }>Change Theme to Blue</button>
+                <button onClick={() => this.props.themeChange('pink')}>Change Theme to Pink</button>
+                <button onClick={() => this.props.themeChange('blue')}>Change Theme to Blue</button>
+                <br />
+                <button onClick={() => toggle('en')}>{t('nav:linkEN')}</button>
+                <button onClick={() => toggle('zh')}>{t('nav:linkZH')}</button>
                 <Header />
                 <Timer />
                 { this.props.children }
