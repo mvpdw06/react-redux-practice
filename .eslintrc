@@ -19,7 +19,7 @@
   "globals": {
   },
   "rules": {
-    "quotes": [2, "single"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "no-undef": "error",
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",

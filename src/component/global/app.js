@@ -73,7 +73,7 @@ class App extends Component {
     }
     render() {
         const { t } = this.props;
-        const toggle = lng => i18n.changeLanguage(lng);
+        const toggle = (lng) => i18n.changeLanguage(lng);
         return(
             <div>
                 <button onClick={() => this.props.themeChange('pink')}>Change Theme to Pink</button>
