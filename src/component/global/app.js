@@ -16,6 +16,10 @@ class App extends Component {
         this.changeViewSize = this.changeViewSize.bind(this);
         this.changeCSS = this.changeCSS.bind(this);
         this.scrollToPosition = this.scrollToPosition.bind(this);
+        this.toggleLanguage = this.toggleLanguage.bind(this);
+    }
+    componentWillMount() {
+        this.toggleLanguage(this.props.params.lang)
     }
     componentDidMount() {
         if(window.addEventListener) {
@@ -71,16 +75,22 @@ class App extends Component {
         console.log('scroll', document.body.scrollTop);
         this.props.scrollToPosition(document.body.scrollTop);
     }
+    toggleLanguage(newLanguage) {
+        if(newLanguage !== i18n.language) {
+            i18n.changeLanguage(newLanguage);
+        }
+    }
     render() {
         const { t } = this.props;
-        const toggle = (lng) => i18n.changeLanguage(lng);
+        console.log('now lang', i18n.language);
+        
         return(
             <div>
                 <button onClick={() => this.props.themeChange('pink')}>Change Theme to Pink</button>
                 <button onClick={() => this.props.themeChange('blue')}>Change Theme to Blue</button>
                 <br />
-                <button onClick={() => toggle('en')}>{t('nav:linkEN')}</button>
-                <button onClick={() => toggle('zh')}>{t('nav:linkZH')}</button>
+                <button onClick={() => this.toggleLanguage('en')}>{t('nav:linkEN')}</button>
+                <button onClick={() => this.toggleLanguage('zh')}>{t('nav:linkZH')}</button>
                 <Header />
                 <Timer />
                 { this.props.children }
