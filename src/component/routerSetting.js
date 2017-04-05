@@ -14,6 +14,7 @@ import BeRedirect from './functional/beRedirect';
 import Hoc from './functional/hoc';
 import ExampleForm from './form/ExampleForm';
 import NotFound from './functional/notFound';
+import NeedAuth from './functional/needAuth';
 
 const history = syncHistoryWithStore(browserHistory, store)
 
@@ -28,6 +29,7 @@ const RouterSetting = (props) => (
       <Route path='hoc' component={Hoc} />
       <Route path='exampleForm' component={ExampleForm} />
     </Route>
+    <Route path="needAuth" component={NeedAuth} />
     <Route path="*" component={NotFound} />    
   </Router>
 );

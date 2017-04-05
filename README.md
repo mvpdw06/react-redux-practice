@@ -70,7 +70,7 @@
 - [x] Router link to a page and be redirect to another page.(browserHistory.push)
 - [x] Implement language path in router.
 - [x] 404 not found component in router.
-- [ ] need Authertication component in router.
+- [x] need Authertication component in router.
 
 ### High-order component
 
