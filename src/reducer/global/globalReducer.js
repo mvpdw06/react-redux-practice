@@ -4,11 +4,11 @@ import { GLOBAL } from '../../constant/constant';
 const themes = [
     {
         name: 'blue',
-        path: './css/theme_blue/main.css'
+        path: '/css/theme_blue/main.css'
     },
     {
         name: 'pink',
-        path: './css/theme_pink/main.css'
+        path: '/css/theme_pink/main.css'
     }
 ];
 

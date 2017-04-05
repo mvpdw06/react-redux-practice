@@ -20,7 +20,7 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 const RouterSetting = (props) => (
   <Router history={browserHistory}>
-    <Route path='/:lang' component={App}>
+    <Route path='/:lang/' component={App}>
       <IndexRoute component={Landing} />
       <Route path='counter' component={Counter} />
       <Route path='getParam/:toShow' component={GetParam} />
