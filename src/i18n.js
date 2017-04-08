@@ -9,11 +9,13 @@ i18n
   // .use(Cache)
   .use(LanguageDetector)
   .init({
-    fallbackLng: 'en',
+    whitelist: ['en-gb', 'zh-tw'],
+    load: 'currentOnly',
+    lowerCaseLng: true,
 
     // have a common namespace used around the full app
-    ns: ['common'],
-    defaultNS: 'common',
+    ns: ['app'],
+    defaultNS: 'app',
 
     debug: false,
 
@@ -31,5 +33,4 @@ i18n
     }
   });
 
-
-export default i18n;
+module.exports = i18n;

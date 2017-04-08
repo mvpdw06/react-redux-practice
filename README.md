@@ -105,7 +105,8 @@
 - [x] Simple i18n example.
 - [x] Translate class decorator.
 - [x] Determine current language by url parameter.
-- [ ] Avoid not support language.
+- [x] Set language-location as my language code in lower-case.
+- [x] any module / component can use its own localization file.
 - [ ] Translate all words in app.
 - [ ] Multiple languages.
 

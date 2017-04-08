@@ -8,7 +8,7 @@ import Timer from '../timer/timer';
 import Header from './header';
 import Footer from './footer';
 
-@translate(['view', 'nav'], { wait: true })
+@translate(['app'], { wait: true })
 class App extends Component {
     constructor(props) {
         super(props);
@@ -19,21 +19,13 @@ class App extends Component {
         this.toggleLanguage = this.toggleLanguage.bind(this);
     }
     componentWillMount() {
+        //TODO: may can set default language here, when language code is not support.
         this.toggleLanguage(this.props.params.lang)
     }
     componentDidMount() {
-        if(window.addEventListener) {
-            window.addEventListener('orientationchange', this.rotate, false);
-            window.addEventListener('resize', this.changeViewSize, false);
-            window.addEventListener('scroll', this.scrollToPosition, false);
-        }
-        else if(window.attachEvent) {
-            // only IE8 ~ IE10
-            window.attachEvent('orientationchange', this.rotate);
-            window.attachEvent('resize', this.rotate);
-            window.attachEvent('scroll', this.scrollToPosition);
-            // scroll bar document.body.scrollTop
-        }
+        window.addEventListener('orientationchange', this.rotate, false);
+        window.addEventListener('resize', this.changeViewSize, false);
+        window.addEventListener('scroll', this.scrollToPosition, false);
     }
     componentWillReceiveProps(nextProps) {
         const nowTheme = this.props.state.theme;
@@ -43,17 +35,9 @@ class App extends Component {
         }
     }
     componentWillUnmount() {
-        if(window.removeEventListener) {
-            window.removeEventListener('orientationchange', this.rotate, false);
-            window.removeEventListener('resize', this.changeViewSize, false);
-            window.removeEventListener('scroll', this.scrollToPosition, false);
-        }
-        else if(window.detachEvent) {
-            // only IE8 ~ IE10
-            window.detachEvent('orientationchange', this.rotate);
-            window.detachEvent('resize', this.changeViewSize);
-            window.detachEvent('scroll', this.scrollToPosition);
-        }
+        window.removeEventListener('orientationchange', this.rotate, false);
+        window.removeEventListener('resize', this.changeViewSize, false);
+        window.removeEventListener('scroll', this.scrollToPosition, false);
     }
     rotate() {
         // TODO: check this API in all browsers.
@@ -72,7 +56,6 @@ class App extends Component {
     }
     scrollToPosition() {
         // can adjust action sensitivity here
-        console.log('scroll', document.body.scrollTop);
         this.props.scrollToPosition(document.body.scrollTop);
     }
     toggleLanguage(newLanguage) {
@@ -82,15 +65,13 @@ class App extends Component {
     }
     render() {
         const { t } = this.props;
-        console.log('now lang', i18n.language);
-        
         return(
             <div>
-                <button onClick={() => this.props.themeChange('pink')}>Change Theme to Pink</button>
-                <button onClick={() => this.props.themeChange('blue')}>Change Theme to Blue</button>
+                <button onClick={() => this.props.themeChange('pink')}>{t('app:changeThemeToPink')}</button>
+                <button onClick={() => this.props.themeChange('blue')}>{t('app:changeThemeToBlue')}</button>
                 <br />
-                <button onClick={() => this.toggleLanguage('en')}>{t('nav:linkEN')}</button>
-                <button onClick={() => this.toggleLanguage('zh')}>{t('nav:linkZH')}</button>
+                <button onClick={() => this.toggleLanguage('en-gb')}>{t('app:changeToEN')}</button>
+                <button onClick={() => this.toggleLanguage('zh-tw')}>{t('app:changeToZH')}</button>
                 <Header />
                 <Timer />
                 { this.props.children }
