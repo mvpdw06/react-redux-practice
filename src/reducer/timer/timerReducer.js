@@ -1,4 +1,5 @@
 import { TIMER, ROUTER } from '../../constant/constant';
+import i18n from '../../i18n';
 
 const timespanType = {
     default: 60,
@@ -13,7 +14,7 @@ const initState = {
 
 const handlePathChange = (state, path) => {
     let newTimespan;
-    if(path === '/counter') {
+    if(path === `/${i18n.language}/counter`) {
         newTimespan = timespanType.counter;
     }
     else {

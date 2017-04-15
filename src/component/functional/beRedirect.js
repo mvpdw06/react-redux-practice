@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router';
 class BeRedirect extends Component {
     componentDidMount() {
         setTimeout(() => {
-            browserHistory.push('/counter');
+            browserHistory.push('./counter');
         }, 3000);
     }
     render() {
