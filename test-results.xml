@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="counter sync action function" timestamp="2017-03-24T17:30:23" hostname="localhost" time="0.004" errors="0" tests="3" skipped="0" disabled="0" failures="0">
-  <testcase classname="counter sync action function" name="count down, should return object with type property." time="0.001" />
-  <testcase classname="counter sync action function" name="reset timer, should return object with type property." time="0.001" />
-  <testcase classname="counter sync action function" name="pause timer, should return object with type property." time="0.001" />
+ <testsuite name="counter sync action function" timestamp="2017-04-15T17:28:43" hostname="localhost" time="0.01" errors="0" tests="6" skipped="0" disabled="0" failures="0">
+  <testcase classname="counter sync action function" name="increment without id, should return object with type property." time="0.005" />
+  <testcase classname="counter sync action function" name="increment with id: 0, should return object with type property and id" time="0.001" />
+  <testcase classname="counter sync action function" name="decrement without id, should return object with type property" time="0.001" />
+  <testcase classname="counter sync action function" name="increment with id: 0, should return object with type property and id" time="0" />
+  <testcase classname="counter sync action function" name="copy counter, should return object with type property" time="0" />
+  <testcase classname="counter sync action function" name="set normal data type, should return object with type property" time="0.001" />
  </testsuite>
 </testsuites>

@@ -111,6 +111,44 @@ describe('normal sync action object', () => {
         const action = { type: 'COPYCOUNTER' }
         expect(counterReducer(state, action)).toEqual(newState);
     });
+    it('set normal data type action with three counters state in different data type, should return three counters state and all in normal data type.', () => {
+        const state = [
+            {
+                id: 0,
+                value: 12,
+                dataType: 'NORMAL'
+            },
+            {
+                id: 1,
+                value: 9,
+                dataType: 'BETTER'
+            },
+            {
+                id: 2,
+                value: 10,
+                dataType: 'WORSE'
+            }
+        ];
+        const newState = [
+            {
+                id: 0,
+                value: 12,
+                dataType: 'NORMAL'
+            },
+            {
+                id: 1,
+                value: 9,
+                dataType: 'NORMAL'
+            },
+            {
+                id: 2,
+                value: 10,
+                dataType: 'NORMAL'
+            }
+        ];
+        const action = { type: 'SETNORMALDATATYPE' }
+        expect(counterReducer(state, action)).toEqual(newState);
+    });
 });
 
 // TODO: INITCOUNTERSUCCESS

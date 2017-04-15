@@ -16,6 +16,9 @@ describe('counter sync action function', () => {
     it('copy counter, should return object with type property', () => {
         expect(counterAction.copyCounter(0)).toEqual({ type: 'COPYCOUNTER' });
     });
+    it('set normal data type, should return object with type property', () => {
+        expect(counterAction.setNormalDataType()).toEqual({ type: 'SETNORMALDATATYPE' });
+    });
 });
 
 // TODO: async action

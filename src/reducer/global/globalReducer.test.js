@@ -14,7 +14,7 @@ describe('empty action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -31,7 +31,7 @@ describe('empty action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -51,7 +51,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -65,7 +65,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -85,7 +85,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -99,7 +99,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'pink',
-                path: './css/theme_pink/main.css'
+                path: '/css/theme_pink/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -120,7 +120,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -134,7 +134,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -155,7 +155,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 0,
             browser: {
@@ -169,7 +169,7 @@ describe('normal sync action object', () => {
             viewType: 1280,
             theme: {
                 name: 'blue',
-                path: './css/theme_blue/main.css'
+                path: '/css/theme_blue/main.css'
             },
             scrollTo: 100,
             browser: {

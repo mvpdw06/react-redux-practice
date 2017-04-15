@@ -11,6 +11,24 @@ class Counter extends Component {
   componentDidMount() {
     this.props.initCounter();
   }
+  componentDidUpdate() {
+    const {
+      counters,
+      setNormalDataType
+    } = this.props;
+
+    const isJumpedCounters = this.props.counters.filter((counter) => {
+      return counter.dataType !== 'NORMAL'
+    });
+
+    if(isJumpedCounters.length > 0) {
+      setTimeout(() => {
+          setNormalDataType()
+        }, 
+        3000
+      );
+    }
+  }
   getNewDataClass(dataType){
     if(dataType === 'BETTER') {
       return 'jumpBetter';
@@ -57,7 +75,8 @@ const mapDispatchToProps = (dispatch) => ({
   initCounter: () => dispatch(counter.initCounter()),
   onIncrement: (id) => dispatch(counter.doIncrement(id)),
   onDecrement: (id) => dispatch(counter.doDecrement(id)),
-  copyCounter: () => dispatch(counter.copyCounter())
+  copyCounter: () => dispatch(counter.copyCounter()),
+  setNormalDataType: () => dispatch(counter.setNormalDataType())
 });
 
 module.exports = connect(

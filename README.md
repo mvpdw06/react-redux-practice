@@ -39,8 +39,6 @@
 - [x] Fix view rotate detect.
 - [x] Detect user browser to state.(bowser)
 - [x] Scroll bar controll to state.
-- [ ] View rotate to changing component's presentation like mobile.
-- [ ] Implement header / footer components like navigation bar.
 - [ ] Header auto collapse.
 - [ ] ~~Scroll to top action.~~(should not be a action for current app.)
 
@@ -54,12 +52,13 @@
 - [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
 - [ ] Trigger current page module update only.
+- [ ] Refresh page should let timer know current page and get right time span.
 
 ### Counter
 - [x] Simple counter component.
 - [x] Copy counter component.
 - [x] When fetching data is not first time, it can compare it selfs and show different color(better or worse).(data structure in reducer, css)
-- [ ] Resolve after first time compare data, css will not change will cause color show be display.
+- [x] Resolve after first time compare data, css will not change will cause color show be display.(change to use js solution, replace css solution)
 
 ### Router
 
@@ -107,9 +106,6 @@
 - [x] Determine current language by url parameter.
 - [x] Set language-location as my language code in lower-case.
 - [x] any module / component can use its own localization file.
-- [ ] Translate all words in app.
-- [ ] Multiple languages.
-
 
 ### Others
 

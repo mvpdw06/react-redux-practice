@@ -24,5 +24,6 @@ export const counterAction = {
     },
     doIncrement: (id) => ({ type: COUNTER.INCREMENT, id }),
     doDecrement: (id) => ({ type: COUNTER.DECREMENT, id }),
-    copyCounter: () => ({ type: COUNTER.COPYCOUNTER })
+    copyCounter: () => ({ type: COUNTER.COPYCOUNTER }),
+    setNormalDataType: () => ({ type: COUNTER.SETNORMALDATATYPE })
 }

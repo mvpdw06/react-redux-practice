@@ -64,17 +64,21 @@ class App extends Component {
         }
     }
     render() {
-        const { t } = this.props;
+        const { 
+            t,
+            themeChange,
+            children
+        } = this.props;
         return(
             <div>
-                <button onClick={() => this.props.themeChange('pink')}>{t('app:changeThemeToPink')}</button>
-                <button onClick={() => this.props.themeChange('blue')}>{t('app:changeThemeToBlue')}</button>
+                <button onClick={() => themeChange('pink')}>{t('app:changeThemeToPink')}</button>
+                <button onClick={() => themeChange('blue')}>{t('app:changeThemeToBlue')}</button>
                 <br />
                 <button onClick={() => this.toggleLanguage('en-gb')}>{t('app:changeToEN')}</button>
                 <button onClick={() => this.toggleLanguage('zh-tw')}>{t('app:changeToZH')}</button>
                 <Header />
                 <Timer />
-                { this.props.children }
+                { children }
                 <Footer />
             </div>
         );

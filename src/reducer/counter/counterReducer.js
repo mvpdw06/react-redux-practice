@@ -80,6 +80,15 @@ const copyCounter = (counters) => {
   ]
 }
 
+const setNormalDataType = (counters) => {
+  return counters.map((counter) => {
+    return {
+      ...counter,
+      dataType: NORMAL
+    }
+  });
+}
+
 const counterReducer = (state = initState, action) => {
   switch (action.type) {
     case COUNTER.INITCOUNTERSUCCESS:
@@ -92,6 +101,8 @@ const counterReducer = (state = initState, action) => {
       return counterDecrement(state, action.id);
     case COUNTER.COPYCOUNTER:
       return copyCounter(state);
+    case COUNTER.SETNORMALDATATYPE:
+      return setNormalDataType(state);
     default:
       return state;
   }
