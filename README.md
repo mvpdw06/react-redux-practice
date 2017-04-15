@@ -116,6 +116,7 @@
 - [ ] Real fetch http online data
 - [ ] Upgrade React to 15.5 version. (prepare for React-Fiber)
 - [ ] Upgrade React-Router to v4 version.
+- [ ] Upgrade React-Router-Redux to v5 version.
 
 ## Dependencies
 
