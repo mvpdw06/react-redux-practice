@@ -9,13 +9,8 @@ class Timer extends Component {
         this.runEndlessTimer = this.runEndlessTimer.bind(this);
     }
     componentDidMount() {
-        const {
-            initTimer,
-            state,
-        } = this.props;
-
         this.timerInstance = setInterval(() => {
-            this.runEndlessTimer(state.currentTime);
+            this.runEndlessTimer(this.props.state.currentTime);
         }, 1000);
     }
     componentWillUnmount() {
@@ -68,7 +63,6 @@ const mapStateToProps = (state) => {
     return { state: state.timer };
 }
 const mapDispatchToProps = (dispatch) => ({
-    initTimer: (pathname) => dispatch(timer.initTimer(pathname)),
     onCountDown: () => dispatch(timer.doCountDown()),
     onResetTimer: () => dispatch(timer.doResetTimer()),
     pauseTimer: () => dispatch(timer.pauseTimer()),
