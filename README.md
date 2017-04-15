@@ -52,7 +52,7 @@
 - [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
 - [x] Refresh page should let timer know current page and get right time span.
-- [ ] Trigger current page module update only.
+- [x] Trigger current page module update only.
 
 ### Counter
 - [x] Simple counter component.

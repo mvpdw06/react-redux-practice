@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { timer, counter } from '../../action/action';
+import i18n from '../../i18n';
 
 class Timer extends Component {
     constructor(props) {
@@ -23,13 +24,18 @@ class Timer extends Component {
             updateCounter,
             state: {
                 isPaused
-            }
+            },
+            pathname
         } = this.props;
         
         if(currentTime < 1) {
             onResetTimer();
             // fetch Counter data.
-            updateCounter();
+            switch (pathname) {
+                case `/${i18n.language}/counter`:
+                    updateCounter();
+                    break;
+            }
         }
         else {
             !isPaused && onCountDown();

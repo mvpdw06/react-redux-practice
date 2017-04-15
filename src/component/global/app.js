@@ -77,7 +77,7 @@ class App extends Component {
                 <button onClick={() => this.toggleLanguage('en-gb')}>{t('app:changeToEN')}</button>
                 <button onClick={() => this.toggleLanguage('zh-tw')}>{t('app:changeToZH')}</button>
                 <Header />
-                <Timer />
+                <Timer pathname={ this.props.location.pathname } />
                 { children }
                 <Footer />
             </div>
