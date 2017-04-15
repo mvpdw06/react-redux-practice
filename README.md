@@ -144,6 +144,11 @@
 22. eslint-plugin-jest
 23. bowser
 
+## Some solution will help in future.
+
+1. [react-lazyload](https://github.com/jasonslyvia/react-lazyload)
+2. [chrome-react-perf](https://github.com/crysislinux/chrome-react-perf)
+
 ## Start with base repository
 
 * Use my [react-webpack-practice](https://github.com/mvpdw06/react-webpack-practice) repository.
