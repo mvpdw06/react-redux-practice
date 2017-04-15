@@ -51,8 +51,8 @@
 - [x] Let timer should be a part of global service.
 - [x] Timer use different time span to count down in different view.
 - [x] Change view trigger timer reset.
+- [x] Refresh page should let timer know current page and get right time span.
 - [ ] Trigger current page module update only.
-- [ ] Refresh page should let timer know current page and get right time span.
 
 ### Counter
 - [x] Simple counter component.

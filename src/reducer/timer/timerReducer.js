@@ -30,25 +30,27 @@ const handlePathChange = (state, path) => {
 
 const timerReducer = (state = initState, action) => {
     switch (action.type) {
-    case TIMER.COUNTDOWN:
-        return {
-            ...state,
-            currentTime: state.currentTime - 1
-        };
-    case TIMER.RESETTIMER:
-        return {
-            ...state,
-            currentTime: state.timespan
-        };
-    case TIMER.PAUSETIMER:
-        return {
-            ...state,
-            isPaused: !state.isPaused
-        };
-    case ROUTER.LOCATION_CHANGE:
-        return handlePathChange(state, action.payload.pathname);
-    default:
-        return state;
+        case TIMER.INITTIMER:
+            return handlePathChange(state, action.pathname);
+        case TIMER.COUNTDOWN:
+            return {
+                ...state,
+                currentTime: state.currentTime - 1
+            };
+        case TIMER.RESETTIMER:
+            return {
+                ...state,
+                currentTime: state.timespan
+            };
+        case TIMER.PAUSETIMER:
+            return {
+                ...state,
+                isPaused: !state.isPaused
+            };
+        case ROUTER.LOCATION_CHANGE:
+            return handlePathChange(state, action.payload.pathname);
+        default:
+            return state;
     }
 }
 
