@@ -12,10 +12,8 @@ class Timer extends Component {
         const {
             initTimer,
             state,
-            pathname
         } = this.props;
-        
-        initTimer(pathname);
+
         this.timerInstance = setInterval(() => {
             this.runEndlessTimer(state.currentTime);
         }, 1000);

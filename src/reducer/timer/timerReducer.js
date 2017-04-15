@@ -1,4 +1,4 @@
-import { TIMER, ROUTER } from '../../constant/constant';
+import { TIMER, ROUTER, COUNTER } from '../../constant/constant';
 import i18n from '../../i18n';
 
 const timespanType = {
@@ -30,8 +30,6 @@ const handlePathChange = (state, path) => {
 
 const timerReducer = (state = initState, action) => {
     switch (action.type) {
-        case TIMER.INITTIMER:
-            return handlePathChange(state, action.pathname);
         case TIMER.COUNTDOWN:
             return {
                 ...state,
@@ -49,6 +47,8 @@ const timerReducer = (state = initState, action) => {
             };
         case ROUTER.LOCATION_CHANGE:
             return handlePathChange(state, action.payload.pathname);
+        case COUNTER.INITCOUNTERSUCCESS:
+            return handlePathChange(state, `/${i18n.language}/counter`);
         default:
             return state;
     }
