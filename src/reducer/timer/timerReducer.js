@@ -1,5 +1,4 @@
 import { TIMER, ROUTER, COUNTER } from '../../constant/constant';
-import i18n from '../../i18n';
 
 const timespanType = {
     default: 60,
@@ -14,7 +13,10 @@ const initState = {
 
 const handlePathChange = (state, path) => {
     let newTimespan;
-    if(path === `/${i18n.language}/counter`) {
+    // simpleRoute: /{language}/{componentRoute} => ['', '{language}', '{componentRoute}']
+    // indexRoute: /{language}/ => ['', '{language}', '']
+    let componentRoute = path.split('/')[2];
+    if(componentRoute === 'counter') {
         newTimespan = timespanType.counter;
     }
     else {
@@ -47,8 +49,6 @@ const timerReducer = (state = initState, action) => {
             };
         case ROUTER.LOCATION_CHANGE:
             return handlePathChange(state, action.payload.pathname);
-        case COUNTER.INITCOUNTERSUCCESS:
-            return handlePathChange(state, `/${i18n.language}/counter`);
         default:
             return state;
     }

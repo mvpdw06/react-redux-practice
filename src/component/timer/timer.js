@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { timer, counter } from '../../action/action';
-import i18n from '../../i18n';
 
 class Timer extends Component {
     constructor(props) {
@@ -30,9 +29,12 @@ class Timer extends Component {
         
         if(currentTime < 1) {
             onResetTimer();
-            // fetch Counter data.
-            switch (pathname) {
-                case `/${i18n.language}/counter`:
+            // simpleRoute: /{language}/{componentRoute} => ['', '{language}', '{componentRoute}']
+            // indexRoute: /{language}/ => ['', '{language}', '']
+            const componentRoute = pathname.split('/')[2];
+            switch (componentRoute) {
+                case 'counter':
+                    // fetch Counter data.
                     updateCounter();
                     break;
             }
