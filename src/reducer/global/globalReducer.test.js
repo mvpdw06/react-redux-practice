@@ -19,7 +19,6 @@ describe('empty action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         expect(globalReducer(state, {})).toEqual(state);
@@ -35,8 +34,7 @@ describe('empty action object', () => {
             },
             scrollTo: 0,
             browser: {
-                name: 'Safari',
-                version: undefined
+                name: 'NodeJs',
             }
         }
         expect(globalReducer(undefined, {})).toEqual(state);
@@ -56,7 +54,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const newState = {
@@ -70,7 +67,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const action = {
@@ -90,7 +86,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const newState = {
@@ -104,7 +99,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const action = {
@@ -125,7 +119,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const newState = {
@@ -139,7 +132,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const action = {
@@ -160,7 +152,6 @@ describe('normal sync action object', () => {
             scrollTo: 0,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const newState = {
@@ -174,7 +165,6 @@ describe('normal sync action object', () => {
             scrollTo: 100,
             browser: {
                 name: 'Chrome',
-                version: '56.0'
             }
         }
         const action = {

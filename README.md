@@ -19,7 +19,6 @@
 - [x] whatwg-fetch
 - [x] Jest
 - [x] eslint-plugin-jest
-- [x] bowser
 
 ## Infrastructure
 
@@ -109,6 +108,7 @@
 
 ### Others
 
+- [x] Browser detecting change to implement by myself.(remove bowser lib)
 - [ ] Real fetch http online data
 - [ ] Upgrade React to 15.5 version. (prepare for React-Fiber)
 - [ ] Upgrade React-Router to v4 version.
@@ -138,7 +138,6 @@
 20. babel-plugin-transform-decorators-legacy
 21. jest
 22. eslint-plugin-jest
-23. bowser
 
 ## Some solution will help in future.
 

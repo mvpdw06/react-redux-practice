@@ -1,5 +1,5 @@
-import bowser from 'bowser';
 import { GLOBAL } from '../../constant/constant';
+import browserDetect from './browserDetect';
 
 const themes = [
     {
@@ -27,8 +27,7 @@ const initState = {
     theme: handleThemeChange('blue'),
     scrollTo: 0,
     browser: {
-        name: bowser.name,
-        version: bowser.version
+        name: browserDetect.name,
     }
 }
 
