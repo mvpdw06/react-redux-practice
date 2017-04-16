@@ -1,4 +1,4 @@
-import { timerAction } from './timerAction';
+import { timerAction } from '../../action/timer/timerAction';
 
 describe('counter sync action function', () => {
     it('count down, should return object with type property.', () => {

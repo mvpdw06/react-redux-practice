@@ -1,4 +1,4 @@
-import { globalAction } from './globalAction';
+import { globalAction } from '../../action/global/globalAction';
 
 describe('counter sync action function', () => {
     it('view rotate, should return object with type property.', () => {

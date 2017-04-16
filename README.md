@@ -87,10 +87,10 @@
 - [x] Code coverage report.
 - [x] Test result report.
 - [x] Test sync action will return object.
+- [x] Refactor unit-test folder structure.
 - [ ] Test all reducers async action.
 - [ ] Test current location changed action.
 - [ ] Test React Component.
-- [ ] Refactor unit-test folder structure.
 
 ### Form validation
 
@@ -113,6 +113,7 @@
 - [ ] Upgrade React to 15.5 version. (prepare for React-Fiber)
 - [ ] Upgrade React-Router to v4 version.
 - [ ] Upgrade React-Router-Redux to v5 version.
+- [ ] React universal
 
 ## Dependencies
 

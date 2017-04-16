@@ -1,4 +1,4 @@
-import counterReducer from './counterReducer';
+import counterReducer from '../../reducer/counter/counterReducer';
 
 describe('empty action object', () => {
     it(' + null state, should return null.', () => {

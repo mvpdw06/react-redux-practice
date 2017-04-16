@@ -1,4 +1,4 @@
-import timerReducer from './timerReducer';
+import timerReducer from '../../reducer/timer/timerReducer';
 
 describe('empty action object', () => {
     it(' + null state, should return null.', () => {

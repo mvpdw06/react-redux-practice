@@ -1,4 +1,4 @@
-import globalReducer from './globalReducer';
+import globalReducer from '../../reducer/global/globalReducer';
 
 describe('empty action object', () => {
     it(' + null state, should return null.', () => {

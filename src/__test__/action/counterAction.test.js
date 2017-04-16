@@ -1,4 +1,4 @@
-import { counterAction } from './counterAction';
+import { counterAction } from '../../action/counter/counterAction';
 
 describe('counter sync action function', () => {
     it('increment without id, should return object with type property.', () => {
