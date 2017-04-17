@@ -109,6 +109,7 @@
 ### Others
 
 - [x] Browser detecting change to implement by myself.(remove bowser lib)
+- [x] Use Container-Pattern to refactor my large component.(App Component)
 - [ ] Real fetch http online data
 - [ ] Upgrade React to 15.5 version. (prepare for React-Fiber)
 - [ ] Upgrade React-Router to v4 version.

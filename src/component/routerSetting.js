@@ -5,7 +5,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import store from '../store/store';
 import action from '../action/action';
 
-import App from './global/app';
+import AppContainer from './global/appContainer';
 import Landing from './home/langing';
 import Timer from './timer/timer';
 import Counter from './counter/counter';
@@ -21,7 +21,7 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 const RouterSetting = (props) => (
   <Router history={browserHistory}>
-    <Route path='/:lang/' component={App}>
+    <Route path='/:lang/' component={AppContainer}>
       <IndexRoute component={Landing} />
       <Route path='counter' component={Counter} />
       <Route path='getParam/:toShow' component={GetParam} />
