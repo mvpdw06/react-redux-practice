@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="counter sync action function" timestamp="2017-04-18T00:09:44" hostname="localhost" time="0.005" errors="0" tests="3" skipped="0" disabled="0" failures="0">
-  <testcase classname="counter sync action function" name="count down, should return object with type property." time="0.002" />
-  <testcase classname="counter sync action function" name="reset timer, should return object with type property." time="0.002" />
-  <testcase classname="counter sync action function" name="pause timer, should return object with type property." time="0.001" />
+ <testsuite name="counter sync action function" timestamp="2017-05-23T18:42:32" hostname="localhost" time="0.006" errors="0" tests="7" skipped="0" disabled="0" failures="0">
+  <testcase classname="counter sync action function" name="view rotate, should return object with type property." time="0.001" />
+  <testcase classname="counter sync action function" name="view size change without viewSize, should return object with type property." time="0" />
+  <testcase classname="counter sync action function" name="view size change with viewSize: 100, should return object with type and viewSize property." time="0" />
+  <testcase classname="counter sync action function" name="theme change without themeName, should return object with type property." time="0" />
+  <testcase classname="counter sync action function" name="theme change with themeName: pink, should return object with type and themeName property." time="0" />
+  <testcase classname="counter sync action function" name="scroll to without position, should return object with type property." time="0" />
+  <testcase classname="counter sync action function" name="scroll to with position: 100, should return object with type and scrollTo property." time="0.001" />
  </testsuite>
 </testsuites>

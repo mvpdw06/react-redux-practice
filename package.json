@@ -4,9 +4,10 @@
   "description": "",
   "scripts": {
     "dev": "babel-node devServer.js",
-    "build": "npm run clean && webpack --config ./webpack.config.babel.js",
+    "eslint": "eslint ./",
     "clean": "rm -rf output/assets",
-    "test": "jest"
+    "build": "npm run clean && webpack --config ./webpack.config.babel.js",
+    "build:prod": "NODE_ENV=production npm run build"
   },
   "author": "Ryan Hsu",
   "license": "ISC",

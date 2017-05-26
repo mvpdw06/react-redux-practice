@@ -4,7 +4,7 @@ import { COUNTER } from '../../constant/constant';
 export const counterAction = {
     initCounter() {
         return (dispatch) => {
-            fetch('../data/counter.json')
+            fetch('/../data/counter.json')
             .then((response) => response.json())
             .then((data) => dispatch({
                 type: COUNTER.INITCOUNTERSUCCESS,
@@ -14,7 +14,7 @@ export const counterAction = {
     },
     updateCounter() {
         return (dispatch) => {
-            fetch('../data/counter.json')
+            fetch('/../data/counter.json')
             .then((response) => response.json())
             .then((data) => dispatch({
                 type: COUNTER.UPDATECOUNTERSUCCESS,
