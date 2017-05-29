@@ -31,28 +31,40 @@ const getPluginsSetting = () => {
     }
     return plugins;
 }
+const getEntrySetting = () => {
+    const entry = [
+        path.join(__dirname, 'src/index')
+    ];
+    if (isDevEnv) {
+        entry.push.apply(
+            entry,
+            [
+                'webpack/hot/only-dev-server',
+                'webpack-dev-server/client?http://localhost:3000'
+            ]
+        );
+        // react-hot-loader should be put on the top of entry.
+        entry.unshift('react-hot-loader/patch');
+    }
+    return entry;
+}
 
 const webpackConfig = {
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: [/node_modules/]
             }
         ]
     },
     devtool: getDevtoolSetting(),
-    plugins: getPluginsSetting()
+    plugins: getPluginsSetting(),
+    entry: getEntrySetting()
 }
 
 const AppConfig = Object.assign({}, webpackConfig, {
-    entry: [
-        'react-hot-loader/patch',
-		path.join(__dirname, 'src/index'),
-		'webpack-dev-server/client?http://localhost:3000',
-		'webpack/hot/only-dev-server'
-    ],
     output: {
         path: path.join(__dirname, 'output/assets'),
 		filename: 'app.js',
