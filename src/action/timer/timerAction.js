@@ -1,7 +1,9 @@
 import { TIMER } from '../../constant/constant';
 
-export const timerAction = {
+const timerAction = {
     doCountDown: () => ({ type: TIMER.COUNTDOWN }),
     doResetTimer: () => ({ type: TIMER.RESETTIMER }),
     pauseTimer: () => ({ type: TIMER.PAUSETIMER })
 }
+
+module.exports = timerAction;

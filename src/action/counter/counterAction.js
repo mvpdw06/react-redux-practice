@@ -1,29 +1,14 @@
-import 'whatwg-fetch';
 import { COUNTER } from '../../constant/constant';
 
-export const counterAction = {
-    initCounter() {
-        return (dispatch) => {
-            fetch('/../data/counter.json')
-            .then((response) => response.json())
-            .then((data) => dispatch({
-                type: COUNTER.INITCOUNTERSUCCESS,
-                value: data.value
-            }));
-        };
-    },
-    updateCounter() {
-        return (dispatch) => {
-            fetch('/../data/counter.json')
-            .then((response) => response.json())
-            .then((data) => dispatch({
-                type: COUNTER.UPDATECOUNTERSUCCESS,
-                value: data.value
-            }));
-        };
-    },
+const counterAction = {
+    initCounter: () => ({ type: COUNTER.INITCOUNTER }),
+    initCounterSuccess: (value) => ({ type: COUNTER.INITCOUNTERSUCCESS, value}),
+    updateCounter: () => ({ type: COUNTER.UPDATECOUNTER }) ,
+    updateCounterSuccess: (value) => ({ type: COUNTER.UPDATECOUNTERSUCCESS, value }),
     doIncrement: (id) => ({ type: COUNTER.INCREMENT, id }),
     doDecrement: (id) => ({ type: COUNTER.DECREMENT, id }),
     copyCounter: () => ({ type: COUNTER.COPYCOUNTER }),
     setNormalDataType: () => ({ type: COUNTER.SETNORMALDATATYPE })
 }
+
+module.exports = counterAction;
