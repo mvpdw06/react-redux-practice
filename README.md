@@ -135,7 +135,7 @@
 11. redux
 12. react-redux
 13. redux-devtools-extension
-14. redux-thunk
+14. ~redux-thunk~ redux-observable
 15. react-router
 16. react-router-redux
 17. whatwg-fetch
@@ -144,6 +144,7 @@
 20. babel-plugin-transform-decorators-legacy
 21. jest
 22. eslint-plugin-jest
+23. RxJs
 
 ## Some solution will help in future.
 
