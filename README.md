@@ -112,13 +112,13 @@
 
 - [x] Browser detecting change to implement by myself.(remove bowser lib)
 - [x] Use Container-Pattern to refactor my large component.(App Component)
-- [ ] Real fetch http online data
+- [x] Prepare package.json production dependency script for CI build, eslint and report.
 - [ ] Upgrade React to 15.5 version. (prepare for React-Fiber)
 - [ ] Upgrade React-Router to v4 version.
 - [ ] Upgrade React-Router-Redux to v5 version.
 - [ ] React universal
 - [ ] Upgrade Webpack to v2.
-- [ ] Prepare package.json production dependency script for CI build, eslint and report.
+- [ ] Adjust dependency and devDependency.
 
 ## Dependencies
 

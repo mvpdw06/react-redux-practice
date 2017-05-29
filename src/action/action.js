@@ -1,6 +1,6 @@
-import { counterAction } from './counter/counterAction';
-import { timerAction } from './timer/timerAction';
-import { globalAction } from './global/globalAction';
+import counterAction from './counter/counterAction';
+import timerAction from './timer/timerAction';
+import globalAction from './global/globalAction';
 
 const actionCreator = {
     counter: counterAction,
