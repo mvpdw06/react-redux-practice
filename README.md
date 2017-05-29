@@ -12,7 +12,9 @@
 - [x] React hot loader
 - [x] Redux
 - [x] react-redux
-- [x] redux-thunk
+- [x] ~redux-thunk~
+- [x] redux-observable
+- [x] RxJs
 - [x] react-router
 - [x] react-router-redux
 - [x] redux-devtools-extension
@@ -115,6 +117,8 @@
 - [ ] Upgrade React-Router to v4 version.
 - [ ] Upgrade React-Router-Redux to v5 version.
 - [ ] React universal
+- [ ] Upgrade Webpack to v2.
+- [ ] Prepare package.json production dependency script for CI build, eslint and report.
 
 ## Dependencies
 
